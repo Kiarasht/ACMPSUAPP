@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-
 public class signup_Fragment extends Fragment {
     View rootView;
 
