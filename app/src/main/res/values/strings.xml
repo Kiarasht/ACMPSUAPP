@@ -6,6 +6,7 @@
         <item>    Calender</item>
         <item>    Sign up</item>
         <item>    Feedback</item>
+        <item>    Settings</item>
         <item>    About</item>
     </string-array>
     <string-array name="section_titles">
@@ -13,6 +14,7 @@
         <item>Calender</item>
         <item>Sign up</item>
         <item>Feedback</item>
+        <item>Settings</item>
         <item>About</item>
     </string-array>
     <string-array name="sections_icons">
@@ -20,6 +22,7 @@
         <item>@drawable/ic_action_event</item>
         <item>@drawable/ic_action_computer</item>
         <item>@drawable/ic_action_feedback</item>
+        <item>@drawable/ic_action_settings</item>
         <item>@drawable/ic_action_help</item>
     </string-array>
 
