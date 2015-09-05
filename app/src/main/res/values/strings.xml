@@ -26,10 +26,6 @@
         <item>@drawable/ic_action_help</item>
     </string-array>
 
-    <string name="title_section1">aaaaaaaaaa</string>
-    <string name="title_section2">bbbbbbbbbb</string>
-    <string name="title_section3">ccccccccccc</string>
-
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
