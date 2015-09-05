@@ -20,7 +20,7 @@
         <item>@drawable/ic_action_event</item>
         <item>@drawable/ic_action_computer</item>
         <item>@drawable/ic_action_feedback</item>
-        <item>@android:drawable/ic_menu_help</item>
+        <item>@drawable/ic_action_help</item>
     </string-array>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
