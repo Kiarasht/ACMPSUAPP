@@ -1,10 +1,27 @@
 <resources>
     <string name="app_name">ACM PSU APP</string>
 
-    <string name="title_section1">Home</string>
-    <string name="title_section2">Calender</string>
-    <string name="title_section3">Sign up</string>
-    <string name="title_section4">About</string>
+    <string-array name="sections">
+        <item>    Home</item>
+        <item>    Calender</item>
+        <item>    Sign up</item>
+        <item>    Feedback</item>
+        <item>    About</item>
+    </string-array>
+    <string-array name="section_titles">
+        <item>Home</item>
+        <item>Calender</item>
+        <item>Sign up</item>
+        <item>Feedback</item>
+        <item>About</item>
+    </string-array>
+    <string-array name="sections_icons">
+        <item>@drawable/ic_action_home</item>
+        <item>@drawable/ic_action_event</item>
+        <item>@drawable/ic_action_computer</item>
+        <item>@drawable/ic_action_feedback</item>
+        <item>@android:drawable/ic_menu_help</item>
+    </string-array>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
