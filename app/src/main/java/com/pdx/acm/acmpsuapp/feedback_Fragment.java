@@ -9,6 +9,12 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+
+/**
+ * feedback_Fragment is a class that allows users to input questions or comments to the ACM.
+ * It uses a webView tool to load and represent an already created Google sheet. It uses a
+ * nested class of MyBrowser so the app does not exit but rather load inside the app itself.
+ */
 public class feedback_Fragment extends Fragment {
     View rootView;
 

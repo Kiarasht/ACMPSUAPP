@@ -8,6 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+/**
+ * home_Fragment is the main page of the applications and it holds the logo of the organization at
+ * the top while a small description at the bottom of it. It mainly uses the home_layout previously
+ * coded in the .xml and simply updates the view before returning it.
+ */
 public class home_Fragment extends Fragment {
     View rootView;
 

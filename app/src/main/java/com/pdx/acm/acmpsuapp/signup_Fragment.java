@@ -9,6 +9,11 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+/**
+ * signup_Fragment is a class that allows users to input their info to the ACM for more updates.
+ * It uses a webView tool to load and represent an already created Google sheet. It uses a
+ * nested class of MyBrowser so the app does not exit but rather load inside the app itself.
+ */
 public class signup_Fragment extends Fragment {
     View rootView;
 

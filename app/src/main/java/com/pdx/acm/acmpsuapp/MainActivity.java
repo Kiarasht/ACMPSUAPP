@@ -16,16 +16,17 @@ import android.support.v4.widget.DrawerLayout;
 public class MainActivity extends AppCompatActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
-    /**
-     * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
-     */
+    //  Fragment managing the behaviors, interactions and presentation of the navigation drawer.
     private NavigationDrawerFragment mNavigationDrawerFragment;
 
-    /**
-     * Used to store the last screen title. For use in {@link #restoreActionBar()}.
-     */
+
+    //  Used to store the last screen title.
     private CharSequence mTitle;
 
+    /**
+     * onCreate simply sets up the drawer, by creating a Fragment and putting the App's
+     * title on the ActionBar.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,12 +36,18 @@ public class MainActivity extends AppCompatActivity
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
 
-        // Set up the drawer.
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
     }
 
+    /**
+     * OnNavigationDrawerItemSelected gives an int based on which drawer was selected. We will
+     * use this given parameter to call and create the correct Fragment so the correct drawer
+     * view show up.
+     *
+     * @param position The position in its list, a drawer was pressed.
+     */
     @Override
     public void onNavigationDrawerItemSelected(int position) {
         Fragment objFragment = null;
@@ -79,11 +86,21 @@ public class MainActivity extends AppCompatActivity
                 .commit();
     }
 
+    /**
+     * Will use the String array declared in string.xml to update the app with the correct
+     * title
+     *
+     * @param number Number will correspond to the drawer number pressed.
+     */
     public void onSectionAttached(int number) {
         String[] stringArray = getResources().getStringArray(R.array.section_titles);
         mTitle = stringArray[number];
     }
 
+    /**
+     * Restores the ActionBar to what it was when the app opened up and when the drawer icon
+     * (3 horizontal bars) have been clicked.
+     */
     public void restoreActionBar() {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
@@ -91,13 +108,18 @@ public class MainActivity extends AppCompatActivity
         actionBar.setTitle(mTitle);
     }
 
-
+    /**
+     * Only show items in the action bar relevant to this screen
+     * if the drawer is not showing. Otherwise, let the drawer
+     * decide what to show in the action bar.
+     *
+     * @param menu Menu of the drawer
+     * @return Returns a boolean on if drawer is showing or not
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         if (!mNavigationDrawerFragment.isDrawerOpen()) {
-            // Only show items in the action bar relevant to this screen
-            // if the drawer is not showing. Otherwise, let the drawer
-            // decide what to show in the action bar.
+
             getMenuInflater().inflate(R.menu.main, menu);
             restoreActionBar();
             return true;
@@ -105,22 +127,25 @@ public class MainActivity extends AppCompatActivity
         return super.onCreateOptionsMenu(menu);
     }
 
+    /**
+     * Handle action bar item clicks here. The action bar will
+     * automatically handle clicks on the Home/Up button, so long
+     * as you specify a parent activity in AndroidManifest.xml.
+     *
+     * @param item Item that was selected
+     * @return Call super on the item
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         return super.onOptionsItemSelected(item);
     }
 
     /**
-     * A placeholder fragment containing a simple view.
+     * A placeholder fragment containing a simple view. Being a static class, we may call its
+     * methods such as onCreateView and onAttach to manage our Fragments.
      */
     public static class PlaceholderFragment extends Fragment {
-        /**
-         * The fragment argument representing the section number for this
-         * fragment.
-         */
+    //  The fragment argument representing the section number for this fragment.
         private static final String ARG_SECTION_NUMBER = "section_number";
 
         /**

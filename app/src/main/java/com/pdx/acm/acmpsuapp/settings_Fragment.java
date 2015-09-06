@@ -8,6 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+/**
+ * settings_Fragment contains various options where a user can mange the app such as their
+ * notification, updates, etc...
+ */
 public class settings_Fragment extends Fragment {
     View rootView;
 
