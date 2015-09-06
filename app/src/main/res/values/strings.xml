@@ -30,4 +30,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <!-- Number is given by GooglePlay to recieve ads payments to the correct account -->
+    <string name="banner_ad_unit_id">ca-app-pub-1850763013639682/3640822230</string>
 </resources>
