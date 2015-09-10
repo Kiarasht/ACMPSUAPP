@@ -20,11 +20,11 @@ public class calender_Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.calender_layout, container, false);
-        String url = "https://www.google.com/calendar/embed?src=pdx.edu_mui9uk67ft1p9chrmnctcu0eug%40group.calendar.google.com&ctz=America/Los_Angeles";
+        String html_value = "<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\"><title>Lorem Ipsum</title></head><body style=\"width:300px; color: #00000; \"><p><strong> About us</strong> </p><p><strong> Lorem Ipsum</strong> is simply dummy text .</p><p><strong> Lorem Ipsum</strong> is simply dummy text </p><p><strong> Lorem Ipsum</strong> is simply dummy text </p></body></html>";
         WebView view = (WebView) rootView.findViewById(R.id.webView2);
         view.getSettings().setJavaScriptEnabled(true);
         view.setWebViewClient(new MyBrowser());
-        view.loadUrl(url);
+        view.loadData(html_value, "text/html", "UTF-8");
         return rootView;
     }
 
