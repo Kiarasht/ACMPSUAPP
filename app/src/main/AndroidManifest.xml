@@ -9,6 +9,7 @@
 
     <!-- Giving our application its logos, name and themes. -->
     <application
+        android:hardwareAccelerated="true"
         android:allowBackup="true"
         android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"

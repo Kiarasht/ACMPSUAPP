@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -14,25 +15,20 @@ import android.webkit.WebViewClient;
  * events users can look up.
  */
 public class calender_Fragment extends Fragment {
-    View rootView;
-
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.calender_layout, container, false);
-        String html_value = "<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\"><title>Lorem Ipsum</title></head><body style=\"width:300px; color: #00000; \"><p><strong> About us</strong> </p><p><strong> Lorem Ipsum</strong> is simply dummy text .</p><p><strong> Lorem Ipsum</strong> is simply dummy text </p><p><strong> Lorem Ipsum</strong> is simply dummy text </p></body></html>";
-        WebView view = (WebView) rootView.findViewById(R.id.webView2);
-        view.getSettings().setJavaScriptEnabled(true);
-        view.setWebViewClient(new MyBrowser());
-        view.loadData(html_value, "text/html", "UTF-8");
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+
+        View rootView = inflater.inflate(R.layout.calender_layout, container, false);
+        WebView webView = (WebView) rootView.findViewById(R.id.webView2);
+        WebSettings webSettings = webView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        webView.loadUrl("file:///android_asset/calender_Fragment.html");
+
         return rootView;
     }
 
-    private class MyBrowser extends WebViewClient {
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            view.loadUrl(url);
-            return true;
-        }
-    }
 }
+
+//<iframe width='100%' height='600' frameborder='0' scrolling='no' src='http://docs.google.com/viewer?url=http://thl.s3.amazonaws.com/books/featured/collectionhorsetrainingtips.pdf&embedded=true' ></iframe>
+
