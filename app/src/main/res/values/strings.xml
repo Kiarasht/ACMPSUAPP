@@ -34,4 +34,7 @@
 
     <!-- Number is given by GooglePlay to receive ads payments to the correct account -->
     <string name="banner_ad_unit_id">ca-app-pub-1850763013639682/3640822230</string>
+    <string name="placeholder">Setting</string>
+    <string name="defineACM">The Association for Computing Machinery is the largest international organization devoted to science and education related to computing. It is a non-profit organization founded in 1947 that provides its members access to professional publications, conferences, and career resources. Our mission statement is to provide a platform of educational resources to foster a diverse community of people passionate about technology.</string>
+    <string name="logodescription">Logo of ACM</string>
 </resources>
