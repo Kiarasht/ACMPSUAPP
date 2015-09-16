@@ -61,7 +61,7 @@ public class settings_Fragment extends Fragment {
     }
 
     /**
-     * Get functions that passes back the switch of the fragment
+     * Get function that passes back the switch of the fragment
      * @return Returns the switch at the current view
      */
     public Switch getswitch() {

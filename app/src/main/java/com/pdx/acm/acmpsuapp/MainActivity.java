@@ -3,7 +3,9 @@ package com.pdx.acm.acmpsuapp;
 import android.app.Activity;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
@@ -18,21 +20,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
-import android.widget.Switch;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     /**
-     * Holds the class setting so we can check the values of the switches
-     */
-    private settings_Fragment settingtab;
-
-    /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
     private NavigationDrawerFragment mNavigationDrawerFragment;
-
 
     /**
      * Used to store the last screen title.
@@ -93,8 +88,7 @@ public class MainActivity extends AppCompatActivity
                 onSectionAttached(3);
                 break;
             case 4:
-                settingtab = new settings_Fragment();
-                objFragment = settingtab;
+                objFragment = new settings_Fragment();
                 onSectionAttached(4);
                 break;
             case 5:
@@ -208,12 +202,13 @@ public class MainActivity extends AppCompatActivity
     public void sendNotification(View view) {
         /**
          * We will get the switch value and check if it is checked before starting a
-         * notification event. If it does happen to be checked, the function will then
+         * notification event. If it does not happen to be checked, the function will then
          * just return.
          */
-        Switch aSwitch = settingtab.getswitch();
+        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+        int savedswitch = sharedPref.getInt(getString(R.string.notificationdata), 1);
 
-        if (!aSwitch.isChecked()) {
+        if (savedswitch == 0) {
             return;
         }
 

@@ -1,6 +1,14 @@
 <resources>
+    <!-- Currently only mainly used in the manifest but is also used
+    in the action bar when the application opens up -->
     <string name="app_name">ACM</string>
 
+    <!-- A string array used to display names in the drawer itself.
+    The spaces is an easy way to align and to place more empty spaces.
+    A spacebar won't work and will be ignored. Only these work:
+    Windows: [alt-255]
+    Mac: [option-space]
+    Linux : [Ctrl+Shift+U + a0] -->
     <string-array name="sections">
         <item>    Home</item>
         <item>    Calender</item>
@@ -9,6 +17,9 @@
         <item>    Settings</item>
         <item>    About</item>
     </string-array>
+
+    <!-- A string array that represents strings that will be displayed at
+    the action bar when their fragment is selected -->
     <string-array name="section_titles">
         <item>Home</item>
         <item>Calender</item>
@@ -17,6 +28,9 @@
         <item>Settings</item>
         <item>About</item>
     </string-array>
+
+    <!-- A string array that holds the values linking to drawable icons.
+    These icons will be placed before their respective descriptions -->
     <string-array name="sections_icons">
         <item>@drawable/ic_action_home</item>
         <item>@drawable/ic_action_event</item>
@@ -26,22 +40,27 @@
         <item>@drawable/ic_action_help</item>
     </string-array>
 
+    <!-- open and close drawer description for accessibility -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="buttonname">Do it!!!!</string>
-
-    <string name="action_settings">Settings</string>
 
     <!-- Number is given by GooglePlay to receive ads payments to the correct account -->
     <string name="banner_ad_unit_id">ca-app-pub-1850763013639682/3640822230</string>
+
+    <!-- A long description that is placed on the homepage of the app -->
     <string name="placeholder">Setting</string>
-    <string name="defineACM">The Association for Computing Machinery is the largest international organization devoted to science and education related to computing. It is a non-profit organization founded in 1947 that provides its members access to professional publications, conferences, and career resources. Our mission statement is to provide a platform of educational resources to foster a diverse community of people passionate about technology.</string>
+    <string name="defineACM">The Association for Computing Machinery is the largest international
+        organization devoted to science and education related to computing. It is a non-profit
+        organization founded in 1947 that provides its members access to professional publications,
+        conferences, and career resources. Our mission statement is to provide a platform of
+        educational resources to foster a diverse community of people passionate about technology.
+    </string>
     <string name="logodescription">Logo of ACM</string>
 
     <!-- Ids given to the switches in the setting drawer -->
     <string name="notificationswitch">Notification</string>
-    <string name="themeswitch">New Switch</string>
-    <string name="soundswitch">New Switch</string>
+    <string name="themeswitch">Theme</string>
+    <string name="soundswitch">Volume</string>
 
     <!-- Strings used for sharing data using the SharedPreferences -->
     <string name="notificationdata">notificationdata</string>
