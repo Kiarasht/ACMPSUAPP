@@ -18,15 +18,23 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
+import android.widget.Switch;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
-    //  Fragment managing the behaviors, interactions and presentation of the navigation drawer.
+    private Switch aSwitch;
+    private settings_Fragment settingtab;
+
+    /**
+     * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
+     */
     private NavigationDrawerFragment mNavigationDrawerFragment;
 
 
-    //  Used to store the last screen title.
+    /**
+     * Used to store the last screen title.
+     */
     private CharSequence mTitle;
 
     /**
@@ -196,7 +204,7 @@ public class MainActivity extends AppCompatActivity
      */
     public void sendNotification(View view) {
         /** Create an intent that will be fired when the user clicks the notification.
-         * The intent needs to be packaged into a {@link android.app.PendingIntent} so that the
+         * The intent needs to be packaged into a {@link PendingIntent} so that the
          * notification service can fire it on our behalf.
          */
         Intent intent = new Intent(Intent.ACTION_VIEW,

@@ -8,10 +8,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Notification"
-        android:id="@+id/switch1"
+        android:id="@+id/notification"
         android:layout_marginTop="70dp"
-        android:layout_alignStart="@+id/switch4"
-        android:checked="true" />
+        android:checked="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/switch2" />
 
     <Switch
         android:layout_width="wrap_content"
@@ -19,9 +20,9 @@
         android:text="New Switch"
         android:id="@+id/switch2"
         android:layout_marginTop="70dp"
-        android:layout_below="@+id/switch1"
-        android:layout_alignStart="@+id/switch1"
-        android:checked="false" />
+        android:checked="false"
+        android:layout_below="@+id/notification"
+        android:layout_alignStart="@+id/switch3" />
 
     <Switch
         android:layout_width="wrap_content"
@@ -30,16 +31,6 @@
         android:id="@+id/switch3"
         android:layout_marginTop="70dp"
         android:layout_below="@+id/switch2"
-        android:layout_alignStart="@+id/switch4" />
-
-    <Switch
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Switch"
-        android:id="@+id/switch4"
-        android:layout_marginTop="70dp"
-        android:layout_below="@+id/switch3"
-        android:layout_centerHorizontal="true"
-        android:checked="false" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
