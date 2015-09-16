@@ -1,6 +1,8 @@
 package com.pdx.acm.acmpsuapp;
 
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -26,18 +28,33 @@ public class settings_Fragment extends Fragment {
 
         aSwitch = (Switch) rootView.findViewById(R.id.notification);
 
-        aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
+        int savedswitch = sharedPref.getInt(getString(R.string.notificationdata), 1);
 
+        if (savedswitch == 1) {
+            aSwitch.setChecked(true);
+        } else if (savedswitch == 0) {
+            aSwitch.setChecked(false);
+        }
+
+        aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView,
                                          boolean isChecked) {
+
+                SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPref.edit();
+
                 if (isChecked) {
                     Toast.makeText(getActivity().getApplicationContext(), "You will now recieve notifications.",
                             Toast.LENGTH_LONG).show();
+                    editor.putInt(getString(R.string.notificationdata), 1);
                 } else {
                     Toast.makeText(getActivity().getApplicationContext(), "You will no longer recieve notifications.",
                             Toast.LENGTH_LONG).show();
+                    editor.putInt(getString(R.string.notificationdata), 0);
                 }
+                editor.commit();
             }
         });
         return rootView;

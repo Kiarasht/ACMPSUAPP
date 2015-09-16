@@ -37,7 +37,13 @@
     <string name="placeholder">Setting</string>
     <string name="defineACM">The Association for Computing Machinery is the largest international organization devoted to science and education related to computing. It is a non-profit organization founded in 1947 that provides its members access to professional publications, conferences, and career resources. Our mission statement is to provide a platform of educational resources to foster a diverse community of people passionate about technology.</string>
     <string name="logodescription">Logo of ACM</string>
+
+    <!-- Ids given to the switches in the setting drawer -->
     <string name="notificationswitch">Notification</string>
     <string name="themeswitch">New Switch</string>
     <string name="soundswitch">New Switch</string>
+
+    <!-- Strings used for sharing data using the SharedPreferences -->
+    <string name="notificationdata">notificationdata</string>
+
 </resources>
