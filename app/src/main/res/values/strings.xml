@@ -64,5 +64,7 @@
 
     <!-- Strings used for sharing data using the SharedPreferences -->
     <string name="notificationdata">notificationdata</string>
+    <string name="themedata">themedata</string>
+    <string name="volumedata">volumedata</string>
 
 </resources>

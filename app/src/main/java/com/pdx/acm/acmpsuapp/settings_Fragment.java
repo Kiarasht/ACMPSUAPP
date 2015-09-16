@@ -19,25 +19,39 @@ import android.widget.Toast;
  */
 public class settings_Fragment extends Fragment {
     View rootView;
-    Switch aSwitch;
+    Switch nSwitch;
+    Switch tSwitch;
+    Switch vSwitch;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.setting_layout, container, false);
 
-        aSwitch = (Switch) rootView.findViewById(R.id.notification);
+        nSwitch = (Switch) rootView.findViewById(R.id.notification);
+        tSwitch = (Switch) rootView.findViewById(R.id.theme);
+        vSwitch = (Switch) rootView.findViewById(R.id.volume);
 
         SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
-        int savedswitch = sharedPref.getInt(getString(R.string.notificationdata), 1);
+        int savednotification = sharedPref.getInt(getString(R.string.notificationdata), 1);
+        int savedtheme = sharedPref.getInt(getString(R.string.themedata), 1);
+        int savedvolume = sharedPref.getInt(getString(R.string.volumedata), 1);
 
-        if (savedswitch == 1) {
-            aSwitch.setChecked(true);
-        } else if (savedswitch == 0) {
-            aSwitch.setChecked(false);
+        if (savednotification == 1) {
+            nSwitch.setChecked(true);
+        } else if (savednotification == 0) {
+            nSwitch.setChecked(false);
+        } if (savedtheme == 1) {
+            tSwitch.setChecked(true);
+        } else if (savedtheme == 0) {
+            tSwitch.setChecked(false);
+        } if (savedvolume == 1) {
+            vSwitch.setChecked(true);
+        } else if (savedvolume == 0) {
+            vSwitch.setChecked(false);
         }
 
-        aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        nSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView,
                                          boolean isChecked) {
@@ -54,18 +68,65 @@ public class settings_Fragment extends Fragment {
                             Toast.LENGTH_LONG).show();
                     editor.putInt(getString(R.string.notificationdata), 0);
                 }
-                editor.commit();
+                editor.apply();
+            }
+        });
+
+        tSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView,
+                                         boolean isChecked) {
+
+                SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPref.edit();
+
+                if (isChecked) {
+                    Toast.makeText(getActivity().getApplicationContext(), "Application changed to a dark theme.",
+                            Toast.LENGTH_LONG).show();
+                    editor.putInt(getString(R.string.themedata), 1);
+                } else {
+                    Toast.makeText(getActivity().getApplicationContext(), "Application changed to a light theme.",
+                            Toast.LENGTH_LONG).show();
+                    editor.putInt(getString(R.string.themedata), 0);
+                }
+                editor.apply();
+            }
+        });
+
+        vSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView,
+                                         boolean isChecked) {
+
+                SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPref.edit();
+
+                if (isChecked) {
+                    Toast.makeText(getActivity().getApplicationContext(), "Application muted.",
+                            Toast.LENGTH_LONG).show();
+                    editor.putInt(getString(R.string.volumedata), 1);
+                } else {
+                    Toast.makeText(getActivity().getApplicationContext(), "Application unmuted.",
+                            Toast.LENGTH_LONG).show();
+                    editor.putInt(getString(R.string.volumedata), 0);
+                }
+                editor.apply();
             }
         });
         return rootView;
     }
 
     /**
-     * Get function that passes back the switch of the fragment
+     * Get functions that pass back the switches of the fragment
      * @return Returns the switch at the current view
      */
-    public Switch getswitch() {
-        return aSwitch;
+    public Switch getnswitch() {
+        return nSwitch;
     }
-
+    public Switch gettswitch() {
+        return nSwitch;
+    }
+    public Switch getvswitch() {
+        return nSwitch;
+    }
 }
