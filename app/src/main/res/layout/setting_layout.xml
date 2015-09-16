@@ -5,32 +5,32 @@
     android:orientation="vertical">
 
     <Switch
+        android:id="@+id/notification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Notification"
-        android:id="@+id/notification"
+        android:layout_alignEnd="@+id/switch2"
+        android:layout_alignParentTop="true"
         android:layout_marginTop="70dp"
         android:checked="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignEnd="@+id/switch2" />
+        android:text="@string/notificationswitch" />
 
     <Switch
+        android:id="@+id/switch2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Switch"
-        android:id="@+id/switch2"
+        android:layout_alignStart="@+id/switch3"
+        android:layout_below="@+id/notification"
         android:layout_marginTop="70dp"
         android:checked="false"
-        android:layout_below="@+id/notification"
-        android:layout_alignStart="@+id/switch3" />
+        android:text="@string/themeswitch" />
 
     <Switch
+        android:id="@+id/switch3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Switch"
-        android:id="@+id/switch3"
-        android:layout_marginTop="70dp"
         android:layout_below="@+id/switch2"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="@string/soundswitch" />
 
 </RelativeLayout>

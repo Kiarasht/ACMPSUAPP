@@ -23,7 +23,9 @@ import android.widget.Switch;
 public class MainActivity extends AppCompatActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
-    private Switch aSwitch;
+    /**
+     * Holds the class setting so we can check the values of the switches
+     */
     private settings_Fragment settingtab;
 
     /**
@@ -91,7 +93,8 @@ public class MainActivity extends AppCompatActivity
                 onSectionAttached(3);
                 break;
             case 4:
-                objFragment = new settings_Fragment();
+                settingtab = new settings_Fragment();
+                objFragment = settingtab;
                 onSectionAttached(4);
                 break;
             case 5:
@@ -203,6 +206,17 @@ public class MainActivity extends AppCompatActivity
      * Send a sample notification using the NotificationCompat API.
      */
     public void sendNotification(View view) {
+        /**
+         * We will get the switch value and check if it is checked before starting a
+         * notification event. If it does happen to be checked, the function will then
+         * just return.
+         */
+        Switch aSwitch = settingtab.getswitch();
+
+        if (!aSwitch.isChecked()) {
+            return;
+        }
+
         /** Create an intent that will be fired when the user clicks the notification.
          * The intent needs to be packaged into a {@link PendingIntent} so that the
          * notification service can fire it on our behalf.
