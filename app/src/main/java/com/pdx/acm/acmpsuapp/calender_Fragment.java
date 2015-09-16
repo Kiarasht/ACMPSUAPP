@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 /**
@@ -19,8 +18,7 @@ public class calender_Fragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.calender_layout, container, false);
         WebView webView = (WebView) rootView.findViewById(R.id.webView2);
-        WebSettings webSettings = webView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
+        webView.getSettings().setJavaScriptEnabled(true);
         webView.loadUrl("file:///android_asset/calender_Fragment.html");
 
         return rootView;
