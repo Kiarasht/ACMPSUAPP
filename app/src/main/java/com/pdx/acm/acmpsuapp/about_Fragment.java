@@ -7,9 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-
 /**
  * about_Fragment is the class responsible of handling the About drawer. This fragment includes
  * descriptions about the ACM organization. It uses the basic view data type to represent its

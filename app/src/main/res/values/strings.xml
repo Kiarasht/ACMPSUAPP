@@ -43,9 +43,6 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <!-- Number is given by GooglePlay to receive ads payments to the correct account -->
-    <string name="banner_ad_unit_id">ca-app-pub-1850763013639682/3640822230</string>
-
     <!-- A long description that is placed on the homepage of the app -->
     <string name="placeholder">Setting</string>
     <string name="defineACM">The Association for Computing Machinery is the largest international

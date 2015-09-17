@@ -19,8 +19,9 @@ public class calender_Fragment extends Fragment {
         View rootView = inflater.inflate(R.layout.calender_layout, container, false);
         WebView webView = (WebView) rootView.findViewById(R.id.webView2);
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("https://www.google.com/calendar/embed?showPrint=0&showCalendars=0&showTz=0&wkst=2&bgcolor=%23ffffff&src=pdx.edu_mui9uk67ft1p9chrmnctcu0eug%40group.calendar.google.com&ctz=America/Los_Angeles");
-        //file:///android_asset/calender_Fragment.html
+        webView.loadUrl("https://www.google.com/calendar/embed?showPrint=0&showCalendars=0&" +
+                "showTz=0&wkst=2&bgcolor=%23ffffff&src=pdx.edu_mui9uk67ft1p9chrmnctcu0eug%4" +
+                "0group.calendar.google.com&ctz=America/Los_Angeles");
         return rootView;
     }
 }

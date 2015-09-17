@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity
         startActivity(gmail);
     }
 
-
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
