@@ -24,6 +24,18 @@ import android.support.v4.widget.DrawerLayout;
 public class MainActivity extends AppCompatActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
+    public void onClick(View v){
+        Intent gmail = new Intent(Intent.ACTION_VIEW);
+        gmail.setClassName("com.google.android.gm","com.google.android.gm.ComposeActivityGmail");
+        gmail.putExtra(Intent.EXTRA_EMAIL, new String[] { "acm-members-join@cecs.pdx.edu" });
+        gmail.setData(Uri.parse("acm-members-join@cecs.pdx.edu"));
+        gmail.putExtra(Intent.EXTRA_SUBJECT, "Join ACM Mailing List");
+        gmail.setType("plain/text");
+        gmail.putExtra(Intent.EXTRA_TEXT, "Send this e-mail to join mailing list");
+        startActivity(gmail);
+    }
+
+
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
@@ -80,20 +92,16 @@ public class MainActivity extends AppCompatActivity
                 onSectionAttached(1);
                 break;
             case 2:
-                objFragment = new signup_Fragment();
+                objFragment = new feedback_Fragment();
                 onSectionAttached(2);
                 break;
             case 3:
-                objFragment = new feedback_Fragment();
+                objFragment = new settings_Fragment();
                 onSectionAttached(3);
                 break;
             case 4:
-                objFragment = new settings_Fragment();
-                onSectionAttached(4);
-                break;
-            case 5:
                 objFragment = new about_Fragment();
-                onSectionAttached(5);
+                onSectionAttached(4);
                 break;
         }
 

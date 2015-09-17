@@ -3,6 +3,8 @@
     in the action bar when the application opens up -->
     <string name="app_name">ACM</string>
 
+    <string name="sign_up_button">Sign Up For Mailing List</string>
+
     <!-- A string array used to display names in the drawer itself.
     The spaces is an easy way to align and to place more empty spaces.
     A spacebar won't work and will be ignored. Only these work:
@@ -12,7 +14,6 @@
     <string-array name="sections">
         <item>    Home</item>
         <item>    Calender</item>
-        <item>    Sign up</item>
         <item>    Feedback</item>
         <item>    Settings</item>
         <item>    About</item>
@@ -23,7 +24,6 @@
     <string-array name="section_titles">
         <item>Home</item>
         <item>Calender</item>
-        <item>Sign up</item>
         <item>Feedback</item>
         <item>Settings</item>
         <item>About</item>
@@ -34,7 +34,6 @@
     <string-array name="sections_icons">
         <item>@drawable/ic_action_home</item>
         <item>@drawable/ic_action_event</item>
-        <item>@drawable/ic_action_computer</item>
         <item>@drawable/ic_action_feedback</item>
         <item>@drawable/ic_action_settings</item>
         <item>@drawable/ic_action_help</item>

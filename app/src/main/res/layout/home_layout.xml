@@ -30,6 +30,15 @@
             android:gravity="center"
             android:text="@string/defineACM"
             android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up_button"
+            android:id="@+id/button"
+            android:onClick="onClick"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
     </RelativeLayout>
 
 </LinearLayout>
