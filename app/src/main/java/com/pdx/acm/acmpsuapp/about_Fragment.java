@@ -22,11 +22,7 @@ public class about_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.about_layout, container, false);
         WebView view = (WebView) rootView.findViewById(R.id.textView2);
-        String text;
-        text = "<html><body><p align=\"justify\">";
-        text+= "This is the text will be justified when displayed!!!";
-        text+= "</p></body></html>";
-        view.loadData(text, "text/html", "utf-8");
+        view.loadUrl("file:///android_asset/about.html");
         view.setBackgroundColor(Color.TRANSPARENT);
         return rootView;
     }
