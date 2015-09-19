@@ -12,7 +12,6 @@
         android:src="@drawable/logo"
         android:contentDescription="@string/logodescription" />
 
-
     <WebView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
