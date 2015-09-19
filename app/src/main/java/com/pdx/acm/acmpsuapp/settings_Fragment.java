@@ -60,11 +60,11 @@ public class settings_Fragment extends Fragment {
                 SharedPreferences.Editor editor = sharedPref.edit();
 
                 if (isChecked) {
-                    Toast.makeText(getActivity().getApplicationContext(), "You will now recieve notifications.",
+                    Toast.makeText(getActivity().getApplicationContext(), "You will now receive notifications.",
                             Toast.LENGTH_LONG).show();
                     editor.putInt(getString(R.string.notificationdata), 1);
                 } else {
-                    Toast.makeText(getActivity().getApplicationContext(), "You will no longer recieve notifications.",
+                    Toast.makeText(getActivity().getApplicationContext(), "You will no longer receive notifications.",
                             Toast.LENGTH_LONG).show();
                     editor.putInt(getString(R.string.notificationdata), 0);
                 }
@@ -106,7 +106,7 @@ public class settings_Fragment extends Fragment {
                             Toast.LENGTH_LONG).show();
                     editor.putInt(getString(R.string.volumedata), 1);
                 } else {
-                    Toast.makeText(getActivity().getApplicationContext(), "Application unmuted.",
+                    Toast.makeText(getActivity().getApplicationContext(), "Application un-muted.",
                             Toast.LENGTH_LONG).show();
                     editor.putInt(getString(R.string.volumedata), 0);
                 }

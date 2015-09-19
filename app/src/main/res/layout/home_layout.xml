@@ -17,7 +17,16 @@
             android:text="@string/sign_up_button"
             android:id="@+id/button"
             android:onClick="onClick"
-            android:layout_centerVertical="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+            android:contentDescription="@string/logodescription"
+            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true" />
     </RelativeLayout>
 

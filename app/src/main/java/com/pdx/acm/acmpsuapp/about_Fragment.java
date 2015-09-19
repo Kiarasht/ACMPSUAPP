@@ -1,11 +1,13 @@
 package com.pdx.acm.acmpsuapp;
 
+import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 
 /**
  * about_Fragment is the class responsible of handling the About drawer. This fragment includes
@@ -19,6 +21,13 @@ public class about_Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.about_layout, container, false);
+        WebView view = (WebView) rootView.findViewById(R.id.textView2);
+        String text;
+        text = "<html><body><p align=\"justify\">";
+        text+= "This is the text will be justified when displayed!!!";
+        text+= "</p></body></html>";
+        view.loadData(text, "text/html", "utf-8");
+        view.setBackgroundColor(Color.TRANSPARENT);
         return rootView;
     }
 }
