@@ -3,7 +3,7 @@
     in the action bar when the application opens up -->
     <string name="app_name">ACM</string>
 
-    <string name="sign_up_button">Sign Up For Mailing List</string>
+    <string name="sign_up_button">Sign up for mailing list</string>
 
     <!-- A string array used to display names in the drawer itself.
     The spaces is an easy way to align and to place more empty spaces.
@@ -62,5 +62,4 @@
     <string name="notificationdata">notificationdata</string>
     <string name="themedata">themedata</string>
     <string name="volumedata">volumedata</string>
-
 </resources>
