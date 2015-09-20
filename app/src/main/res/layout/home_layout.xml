@@ -17,20 +17,12 @@
         android:contentDescription="@string/logodescription"
         android:src="@drawable/logo" />
 
-    <FrameLayout
-        android:background="@drawable/custom_button"
-        style="?android:attr/buttonStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true">
-
         <TextView
+            android:background="@drawable/custom_button"
             style="?android:attr/buttonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@null"
             android:drawableLeft="@drawable/ic_action_email"
             android:focusable="false"
             android:gravity="center"
@@ -38,6 +30,8 @@
             android:minWidth="0dp"
             android:onClick="onClick"
             android:text="@string/sign_up_button"
-            android:textAllCaps="false" />
-    </FrameLayout>
+            android:textAllCaps="false"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="19dp" />
 </RelativeLayout>
