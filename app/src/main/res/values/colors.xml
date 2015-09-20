@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="global_color">#C8E6C9</color>
+    <color name="actionbar_color">#1B5E20</color>
+    <color name="drawer_selected">#388E3C</color>
+    <color name="drawer_pressed">#CC4CAF50</color>
     <color name="drawer_color">#CC81C784</color>
+    <color name="global_color">#C8E6C9</color>
+    
     <color name="button_fill_1">#AED581</color>
     <color name="button_fill_2">#33691E</color>
     <color name="button_border">#1B5E20</color>
