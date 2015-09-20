@@ -5,4 +5,12 @@
     <color name="red">#ff0000</color>
     <color name="black">#000000</color>
     <color name="grey">#424242</color>
+    <color name="yellow1">#FFD600</color>
+    <color name="yellow2">#FFFF00</color>
+    <color name="orange1">#FF6D00</color>
+    <color name="orange2">#FFAB40</color>
+    <color name="blue1">#FFFFFF</color>
+    <color name="blue2">#000000</color>
+    <color name="green1">#AED581</color>
+    <color name="green2">#33691E</color>
 </resources>

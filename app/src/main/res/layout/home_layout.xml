@@ -18,6 +18,7 @@
         android:src="@drawable/logo" />
 
     <FrameLayout
+        android:background="@drawable/custom_button"
         style="?android:attr/buttonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,17 +27,17 @@
 
         <TextView
             style="?android:attr/buttonStyle"
-            android:textAllCaps="false"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@null"
-            android:onClick="onClick"
-            android:drawableLeft="@android:drawable/ic_dialog_email"
+            android:drawableLeft="@drawable/ic_action_email"
             android:focusable="false"
             android:gravity="center"
             android:minHeight="0dp"
             android:minWidth="0dp"
-            android:text="@string/sign_up_button" />
+            android:onClick="onClick"
+            android:text="@string/sign_up_button"
+            android:textAllCaps="false" />
     </FrameLayout>
 </RelativeLayout>
