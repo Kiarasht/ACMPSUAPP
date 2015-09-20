@@ -9,8 +9,8 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/logo"
-        android:contentDescription="@string/logodescription" />
+        android:contentDescription="@string/logodescription"
+        android:src="@drawable/logo" />
 
     <WebView
         android:id="@+id/textView2"

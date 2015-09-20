@@ -41,11 +41,13 @@ public class settings_Fragment extends Fragment {
             nSwitch.setChecked(true);
         } else if (savednotification == 0) {
             nSwitch.setChecked(false);
-        } if (savedtheme == 1) {
+        }
+        if (savedtheme == 1) {
             tSwitch.setChecked(true);
         } else if (savedtheme == 0) {
             tSwitch.setChecked(false);
-        } if (savedvolume == 1) {
+        }
+        if (savedvolume == 1) {
             vSwitch.setChecked(true);
         } else if (savedvolume == 0) {
             vSwitch.setChecked(false);
@@ -114,19 +116,5 @@ public class settings_Fragment extends Fragment {
             }
         });
         return rootView;
-    }
-
-    /**
-     * Get functions that pass back the switches of the fragment
-     * @return Returns the switch at the current view
-     */
-    public Switch getnswitch() {
-        return nSwitch;
-    }
-    public Switch gettswitch() {
-        return nSwitch;
-    }
-    public Switch getvswitch() {
-        return nSwitch;
     }
 }

@@ -24,10 +24,10 @@ import android.support.v4.widget.DrawerLayout;
 public class MainActivity extends AppCompatActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
-    public void onClick(View v){
+    public void onClick(View v) {
         Intent gmail = new Intent(Intent.ACTION_VIEW);
-        gmail.setClassName("com.google.android.gm","com.google.android.gm.ComposeActivityGmail");
-        gmail.putExtra(Intent.EXTRA_EMAIL, new String[] { "acm-members-join@cecs.pdx.edu" });
+        gmail.setClassName("com.google.android.gm", "com.google.android.gm.ComposeActivityGmail");
+        gmail.putExtra(Intent.EXTRA_EMAIL, new String[]{"acm-members-join@cecs.pdx.edu"});
         gmail.setData(Uri.parse("acm-members-join@cecs.pdx.edu"));
         gmail.putExtra(Intent.EXTRA_SUBJECT, "Join ACM Mailing List");
         gmail.setType("plain/text");
@@ -170,7 +170,7 @@ public class MainActivity extends AppCompatActivity
      * methods such as onCreateView and onAttach to manage our Fragments.
      */
     public static class PlaceholderFragment extends Fragment {
-    //  The fragment argument representing the section number for this fragment.
+        //  The fragment argument representing the section number for this fragment.
         private static final String ARG_SECTION_NUMBER = "section_number";
 
         /**
