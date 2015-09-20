@@ -2,17 +2,21 @@
 <selector
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- The colors representing the button when pressed. -->
     <item android:state_pressed="true" >
         <shape>
             <gradient
-                android:startColor="@color/green1"
-                android:endColor="@color/green2"
+                android:startColor="@color/button_fill_1"
+                android:endColor="@color/button_fill_2"
                 android:angle="270" />
+            <!-- Border of the button, representing its width and color -->
             <stroke
                 android:width="3dp"
-                android:color="@color/green4" />
+                android:color="@color/button_border" />
+            <!-- Depth of the button's borders -->
             <corners
                 android:radius="3dp" />
+            <!-- The gradient feel of the button -->
             <padding
                 android:left="10dp"
                 android:top="10dp"
@@ -21,15 +25,16 @@
         </shape>
     </item>
 
+    <!-- The colors of the button when focused on using a dpad or trackball. -->
     <item android:state_focused="true" >
         <shape>
             <gradient
-                android:endColor="@color/orange1"
-                android:startColor="@color/orange2"
+                android:startColor="@color/button_fill_1"
+                android:endColor="@color/button_fill_2"
                 android:angle="270" />
             <stroke
                 android:width="3dp"
-                android:color="@color/green4" />
+                android:color="@color/button_border" />
             <corners
                 android:radius="3dp" />
             <padding
@@ -40,15 +45,16 @@
         </shape>
     </item>
 
+    <!-- The colors representing the button when not being interacted with. -->
     <item>
         <shape>
             <gradient
-                android:startColor="@color/green2"
-                android:endColor="@color/green1"
+                android:startColor="@color/button_fill_2"
+                android:endColor="@color/button_fill_1"
                 android:angle="270" />
             <stroke
                 android:width="3dp"
-                android:color="@color/green4" />
+                android:color="@color/button_border" />
             <corners
                 android:radius="3dp" />
             <padding

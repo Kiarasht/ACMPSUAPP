@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="blue">#FF2f74c3</color>
-    <color name="white">#fefefe</color>
-    <color name="red">#ff0000</color>
-    <color name="black">#000000</color>
-    <color name="grey">#424242</color>
-    <color name="yellow1">#FFD600</color>
-    <color name="yellow2">#FFFF00</color>
-    <color name="orange1">#FF6D00</color>
-    <color name="orange2">#FFAB40</color>
-    <color name="blue1">#FFFFFF</color>
-    <color name="blue2">#000000</color>
-    <color name="green1">#AED581</color>
-    <color name="green2">#33691E</color>
-    <color name="green3">#C8E6C9</color>
-    <color name="green4">#1B5E20</color>
-
+    <color name="global_color">#C8E6C9</color>
+    <color name="drawer_color">#CC81C784</color>
+    <color name="button_fill_1">#AED581</color>
+    <color name="button_fill_2">#33691E</color>
+    <color name="button_border">#1B5E20</color>
 </resources>

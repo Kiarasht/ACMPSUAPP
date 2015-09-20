@@ -17,21 +17,21 @@
         android:contentDescription="@string/logodescription"
         android:src="@drawable/logo" />
 
-        <TextView
-            android:background="@drawable/custom_button"
-            style="?android:attr/buttonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:drawableLeft="@drawable/ic_action_email"
-            android:focusable="false"
-            android:gravity="center"
-            android:minHeight="0dp"
-            android:minWidth="0dp"
-            android:onClick="onClick"
-            android:text="@string/sign_up_button"
-            android:textAllCaps="false"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="19dp" />
+    <TextView
+        style="?android:attr/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="19dp"
+        android:background="@drawable/custom_button"
+        android:drawableLeft="@drawable/ic_action_email"
+        android:focusable="false"
+        android:gravity="center"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:onClick="onClick"
+        android:text="@string/sign_up_button"
+        android:textAllCaps="false" />
 </RelativeLayout>
