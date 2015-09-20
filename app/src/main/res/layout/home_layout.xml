@@ -1,35 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical">
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginLeft="0dp"
+    android:layout_marginTop="0dp">
 
-    <RelativeLayout
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/logodescription"
+        android:src="@drawable/logo" />
+
+    <FrameLayout
+        style="?android:attr/buttonStyle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal">
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
 
-
-        <Button
-            android:id="@+id/button"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_action_event"
-            android:onClick="onClick"
-            android:text="@string/sign_up_button"
+        <TextView
+            style="?android:attr/buttonStyle"
             android:textAllCaps="false"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true" />
-
-        <ImageView
-            android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:contentDescription="@string/logodescription"
-            android:src="@drawable/logo" />
-    </RelativeLayout>
-</LinearLayout>
+            android:layout_gravity="center"
+            android:background="@null"
+            android:onClick="onClick"
+            android:drawableLeft="@android:drawable/ic_dialog_email"
+            android:focusable="false"
+            android:gravity="center"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:text="@string/sign_up_button" />
+    </FrameLayout>
+</RelativeLayout>
