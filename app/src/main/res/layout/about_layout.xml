@@ -21,5 +21,6 @@
         android:layout_marginTop="19dp"
         android:gravity="center"
         android:text="@string/defineACM"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>
