@@ -9,7 +9,10 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
+import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.Toast;
 
@@ -17,11 +20,13 @@ import android.widget.Toast;
  * settings_Fragment contains various options where a user can mange the app such as their
  * notification, updates, etc...
  */
-public class settings_Fragment extends Fragment {
+public class settings_Fragment extends Fragment implements AdapterView.OnItemSelectedListener {
     View rootView;
+    Spinner spinner;
     Switch nSwitch;
     Switch tSwitch;
     Switch vSwitch;
+    int theme = 0;
 
     @Nullable
     @Override
@@ -31,6 +36,11 @@ public class settings_Fragment extends Fragment {
         nSwitch = (Switch) rootView.findViewById(R.id.notification);
         tSwitch = (Switch) rootView.findViewById(R.id.theme);
         vSwitch = (Switch) rootView.findViewById(R.id.volume);
+
+        spinner = (Spinner) rootView.findViewById(R.id.spinner);
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(getActivity(),R.array.array_theme,android.R.layout.simple_spinner_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
 
         SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
         int savednotification = sharedPref.getInt(getString(R.string.notificationdata), 1);
@@ -116,5 +126,15 @@ public class settings_Fragment extends Fragment {
             }
         });
         return rootView;
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        theme = position;
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }
