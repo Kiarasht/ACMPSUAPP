@@ -62,4 +62,18 @@
     <string name="notificationdata">notificationdata</string>
     <string name="themedata">themedata</string>
     <string name="volumedata">volumedata</string>
+
+    <!-- An array list that holds the text related to spinner in settings -->
+    <string-array name="array_theme">
+        <item>Theme 1</item>
+        <item>Theme 2</item>
+        <item>Theme 3</item>
+        <item>Theme 4</item>
+        <item>Theme 5</item>
+        <item>Theme 6</item>
+        <item>Theme 7</item>
+        <item>Theme 8</item>
+        <item>Theme 9</item>
+        <item>Theme 10</item>
+    </string-array>
 </resources>
