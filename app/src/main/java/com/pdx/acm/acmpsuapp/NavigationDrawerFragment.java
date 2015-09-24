@@ -1,5 +1,6 @@
 package com.pdx.acm.acmpsuapp;
 
+import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
@@ -81,8 +82,23 @@ public class NavigationDrawerFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        mDrawerListView = (ListView) inflater.inflate(
-                R.layout.fragment_navigation_drawer, container, false);
+        Activity activity = getActivity();
+        SharedPreferences sharedPref = activity.getPreferences(Context.MODE_PRIVATE);
+        int savedtheme = sharedPref.getInt(getString(R.string.themedata), 0);
+
+        switch (savedtheme) {
+            case 0:
+                mDrawerListView = (ListView) inflater.inflate(
+                        R.layout.fragment_navigation_drawer, container, false);
+                break;
+            case 1:
+                mDrawerListView = (ListView) inflater.inflate(
+                        R.layout.red_fragment_navigation_drawer, container, false);
+                break;
+            case 2:
+
+                break;
+        }
         mDrawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity
                 this.setTheme(R.style.AppTheme);
                 break;
             case 1:
-                this.setTheme(R.style.BlackTheme);
+                this.setTheme(R.style.RedTheme);
                 break;
             case 2:
                 this.setTheme(R.style.BlueTheme);
