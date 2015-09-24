@@ -24,6 +24,11 @@ import android.support.v4.widget.DrawerLayout;
 public class MainActivity extends AppCompatActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
+    /**
+     * The button on the homepage that will take the user to the sign up email by
+     * clicking on it.
+     * @param v A view, but is not used in this function
+     */
     public void onClick(View v) {
         Intent gmail = new Intent(Intent.ACTION_VIEW);
         gmail.setClassName("com.google.android.gm", "com.google.android.gm.ComposeActivityGmail");
@@ -58,9 +63,17 @@ public class MainActivity extends AppCompatActivity
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        /**
+         * We get the themedata saved to see if user had previously preferred a theme.
+         * If not, we give it a default value of zero which is the green theme.
+         */
         SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
         int savedtheme = sharedPref.getInt(getString(R.string.themedata), 0);
 
+        /**
+         * Each switch case represents a theme. Our spinner has 10 items, and just like
+         * an array it starts from 0 and ends at 9 in this case.
+         */
         switch (savedtheme) {
             case 0:
                 this.setTheme(R.style.AppTheme);

@@ -83,9 +83,18 @@ public class NavigationDrawerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         Activity activity = getActivity();
+
+        /**
+         * We will use the themedata here to also create the correct drawer colors.
+         * Using themedata we can call the correct layout which then contains the
+         * correct background colors.
+         */
         SharedPreferences sharedPref = activity.getPreferences(Context.MODE_PRIVATE);
         int savedtheme = sharedPref.getInt(getString(R.string.themedata), 0);
 
+        /**
+         * Each switch case refers to a layout with each their own specific colors.
+         */
         switch (savedtheme) {
             case 0:
                 mDrawerListView = (ListView) inflater.inflate(
