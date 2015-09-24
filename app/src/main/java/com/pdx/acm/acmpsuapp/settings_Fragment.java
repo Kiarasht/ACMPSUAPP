@@ -14,7 +14,6 @@ import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
 import android.widget.Spinner;
 import android.widget.Switch;
-import android.widget.Toast;
 
 /**
  * settings_Fragment contains various options where a user can mange the app such as their
@@ -22,7 +21,6 @@ import android.widget.Toast;
  */
 public class settings_Fragment extends Fragment implements AdapterView.OnItemSelectedListener {
     View rootView;
-    Spinner spinner;
     Switch nSwitch;
     Switch vSwitch;
 
@@ -47,7 +45,6 @@ public class settings_Fragment extends Fragment implements AdapterView.OnItemSel
         int savedtheme = sharedPref.getInt(getString(R.string.themedata), 0);
         spinner.setSelection(savedtheme);
 
-
         if (savednotification == 1) {
             nSwitch.setChecked(true);
         } else if (savednotification == 0) {
@@ -67,12 +64,8 @@ public class settings_Fragment extends Fragment implements AdapterView.OnItemSel
                 SharedPreferences.Editor editor = sharedPref.edit();
 
                 if (isChecked) {
-                    Toast.makeText(getActivity().getApplicationContext(), "You will now receive notifications.",
-                            Toast.LENGTH_LONG).show();
                     editor.putInt(getString(R.string.notificationdata), 1);
                 } else {
-                    Toast.makeText(getActivity().getApplicationContext(), "You will no longer receive notifications.",
-                            Toast.LENGTH_LONG).show();
                     editor.putInt(getString(R.string.notificationdata), 0);
                 }
                 editor.apply();
@@ -83,17 +76,12 @@ public class settings_Fragment extends Fragment implements AdapterView.OnItemSel
             @Override
             public void onCheckedChanged(CompoundButton buttonView,
                                          boolean isChecked) {
-
                 SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPref.edit();
 
                 if (isChecked) {
-                    Toast.makeText(getActivity().getApplicationContext(), "Application muted.",
-                            Toast.LENGTH_LONG).show();
                     editor.putInt(getString(R.string.volumedata), 1);
                 } else {
-                    Toast.makeText(getActivity().getApplicationContext(), "Application un-muted.",
-                            Toast.LENGTH_LONG).show();
                     editor.putInt(getString(R.string.volumedata), 0);
                 }
                 editor.apply();
@@ -108,10 +96,6 @@ public class settings_Fragment extends Fragment implements AdapterView.OnItemSel
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putInt(getString(R.string.themedata), position);
         editor.apply();
-
-        Toast.makeText(getActivity().getApplicationContext(), "Restart application for changes to take affect.",
-                Toast.LENGTH_LONG).show();
-        editor.putInt(getString(R.string.themedata), position);
     }
 
     @Override
