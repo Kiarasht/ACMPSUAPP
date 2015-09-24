@@ -19,47 +19,47 @@
     <color name="blue_drawer_color">#CC4FC3F7</color>
     <color name="blue_global_color">#B3E5FC</color>
 
-    <color name="purple_actionbar_color">#01579B</color>
-    <color name="purple_drawer_selected">#0288D1</color>
-    <color name="purple_drawer_pressed">#CC03A9F4</color>
-    <color name="purple_drawer_color">#CC4FC3F7</color>
-    <color name="purple_global_color">#B3E5FC</color>
+    <color name="purple_actionbar_color">#4A148C</color>
+    <color name="purple_drawer_selected">#7B1FA2</color>
+    <color name="purple_drawer_pressed">#CC9C27B0</color>
+    <color name="purple_drawer_color">#CCBA68C8</color>
+    <color name="purple_global_color">#E1BEE7</color>
 
-    <color name="indigo_actionbar_color">#01579B</color>
-    <color name="indigo_drawer_selected">#0288D1</color>
-    <color name="indigo_drawer_pressed">#CC03A9F4</color>
-    <color name="indigo_drawer_color">#CC4FC3F7</color>
-    <color name="indigo_global_color">#B3E5FC</color>
+    <color name="indigo_actionbar_color">#1A237E</color>
+    <color name="indigo_drawer_selected">#303F9F</color>
+    <color name="indigo_drawer_pressed">#CC3F51B5</color>
+    <color name="indigo_drawer_color">#CC7986CB</color>
+    <color name="indigo_global_color">#C5CAE9</color>
 
-    <color name="cyan_actionbar_color">#01579B</color>
-    <color name="cyan_drawer_selected">#0288D1</color>
-    <color name="cyan_drawer_pressed">#CC03A9F4</color>
-    <color name="cyan_drawer_color">#CC4FC3F7</color>
-    <color name="cyan_global_color">#B3E5FC</color>
+    <color name="cyan_actionbar_color">#006064</color>
+    <color name="cyan_drawer_selected">#0097A7</color>
+    <color name="cyan_drawer_pressed">#CC00BCD4</color>
+    <color name="cyan_drawer_color">#CC4DD0E1</color>
+    <color name="cyan_global_color">#B2EBF2</color>
 
-    <color name="yellow_actionbar_color">#01579B</color>
-    <color name="yellow_drawer_selected">#0288D1</color>
-    <color name="yellow_drawer_pressed">#CC03A9F4</color>
-    <color name="yellow_drawer_color">#CC4FC3F7</color>
-    <color name="yellow_global_color">#B3E5FC</color>
+    <color name="yellow_actionbar_color">#F57F17</color>
+    <color name="yellow_drawer_selected">#FBC02D</color>
+    <color name="yellow_drawer_pressed">#CCFFEB3B</color>
+    <color name="yellow_drawer_color">#CCFFF176</color>
+    <color name="yellow_global_color">#FFF9C4</color>
 
-    <color name="orange_actionbar_color">#01579B</color>
-    <color name="orange_drawer_selected">#0288D1</color>
-    <color name="orange_drawer_pressed">#CC03A9F4</color>
-    <color name="orange_drawer_color">#CC4FC3F7</color>
-    <color name="orange_global_color">#B3E5FC</color>
+    <color name="orange_actionbar_color">#E65100</color>
+    <color name="orange_drawer_selected">#F57C00</color>
+    <color name="orange_drawer_pressed">#CCFF9800</color>
+    <color name="orange_drawer_color">#CCFFB74D</color>
+    <color name="orange_global_color">#FFE0B2</color>
 
-    <color name="brown_actionbar_color">#01579B</color>
-    <color name="brown_drawer_selected">#0288D1</color>
-    <color name="brown_drawer_pressed">#CC03A9F4</color>
-    <color name="brown_drawer_color">#CC4FC3F7</color>
-    <color name="brown_global_color">#B3E5FC</color>
+    <color name="brown_actionbar_color">#3E2723</color>
+    <color name="brown_drawer_selected">#5D4037</color>
+    <color name="brown_drawer_pressed">#CC795548</color>
+    <color name="brown_drawer_color">#CCA1887F</color>
+    <color name="brown_global_color">#D7CCC8</color>
 
-    <color name="grey_actionbar_color">#01579B</color>
-    <color name="grey_drawer_selected">#0288D1</color>
-    <color name="grey_drawer_pressed">#CC03A9F4</color>
-    <color name="grey_drawer_color">#CC4FC3F7</color>
-    <color name="grey_global_color">#B3E5FC</color>
+    <color name="grey_actionbar_color">#212121</color>
+    <color name="grey_drawer_selected">#616161</color>
+    <color name="grey_drawer_pressed">#CC9E9E9E</color>
+    <color name="grey_drawer_color">#CCE0E0E0</color>
+    <color name="grey_global_color">#F5F5F5</color>
 
     <color name="button_fill_1">#AED581</color>
     <color name="button_fill_2">#33691E</color>

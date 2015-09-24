@@ -71,6 +71,27 @@ public class MainActivity extends AppCompatActivity
             case 2:
                 this.setTheme(R.style.BlueTheme);
                 break;
+            case 3:
+                this.setTheme(R.style.PurpleTheme);
+                break;
+            case 4:
+                this.setTheme(R.style.IndigoTheme);
+                break;
+            case 5:
+                this.setTheme(R.style.CyanTheme);
+                break;
+            case 6:
+                this.setTheme(R.style.YellowTheme);
+                break;
+            case 7:
+                this.setTheme(R.style.OrangeTheme);
+                break;
+            case 8:
+                this.setTheme(R.style.BrownTheme);
+                break;
+            case 9:
+                this.setTheme(R.style.GreyTheme);
+                break;
         }
 
         super.onCreate(savedInstanceState);

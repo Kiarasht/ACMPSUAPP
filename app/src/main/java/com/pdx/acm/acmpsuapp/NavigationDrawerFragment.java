@@ -96,7 +96,36 @@ public class NavigationDrawerFragment extends Fragment {
                         R.layout.red_fragment_navigation_drawer, container, false);
                 break;
             case 2:
-
+                mDrawerListView = (ListView) inflater.inflate(
+                        R.layout.blue_fragment_navigation_drawer, container, false);
+                break;
+            case 3:
+                mDrawerListView = (ListView) inflater.inflate(
+                        R.layout.purple_fragment_navigation_drawer, container, false);
+                break;
+            case 4:
+                mDrawerListView = (ListView) inflater.inflate(
+                        R.layout.indigo_fragment_navigation_drawer, container, false);
+                break;
+            case 5:
+                mDrawerListView = (ListView) inflater.inflate(
+                        R.layout.cyan_fragment_navigation_drawer, container, false);
+                break;
+            case 6:
+                mDrawerListView = (ListView) inflater.inflate(
+                        R.layout.yellow_fragment_navigation_drawer, container, false);
+                break;
+            case 7:
+                mDrawerListView = (ListView) inflater.inflate(
+                        R.layout.orange_fragment_navigation_drawer, container, false);
+                break;
+            case 8:
+                mDrawerListView = (ListView) inflater.inflate(
+                        R.layout.brown_fragment_navigation_drawer, container, false);
+                break;
+            case 9:
+                mDrawerListView = (ListView) inflater.inflate(
+                        R.layout.grey_fragment_navigation_drawer, container, false);
                 break;
         }
         mDrawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
