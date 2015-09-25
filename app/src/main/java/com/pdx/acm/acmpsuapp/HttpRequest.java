@@ -87,7 +87,11 @@ public class HttpRequest{
             httpPost.setHeader("Content-Type", "application/x-www-form-urlencoded");
         }
 
-        tmp = new StringEntity(data,"UTF-8");
+        try {
+            tmp = new StringEntity(data,"UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            Log.e("Your App Name Here", "HttpUtils : UnsupportedEncodingException : "+e);
+        }
 
         httpPost.setEntity(tmp);
 

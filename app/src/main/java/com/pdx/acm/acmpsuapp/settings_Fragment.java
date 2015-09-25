@@ -118,7 +118,6 @@ public class settings_Fragment extends Fragment implements AdapterView.OnItemSel
     }
 
     public void postData() {
-
         String fullUrl = "https://docs.google.com/forms/d/17-5nt3oKS4ZOc1ERlBnOs8UbPkupwfUpVLBWvIsqt58/formResponse";
         HttpRequest mReq = new HttpRequest();
         String col1 = "Hello";
