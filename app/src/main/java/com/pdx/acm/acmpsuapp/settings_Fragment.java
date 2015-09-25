@@ -6,7 +6,6 @@ import android.content.SharedPreferences;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,8 +15,6 @@ import android.widget.CompoundButton;
 import android.widget.Spinner;
 import android.widget.Switch;
 
-import java.net.URLEncoder;
-
 /**
  * settings_Fragment contains various options where a user can mange the app such as their
  * notification, updates, etc...
@@ -26,23 +23,11 @@ public class settings_Fragment extends Fragment implements AdapterView.OnItemSel
     View rootView;
     Switch nSwitch;
     Switch vSwitch;
-    final String myTag = "DocsUpload";
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.setting_layout, container, false);
-
-        Log.i(myTag, "OnCreate()");
-        Thread t = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                postData();
-
-            }
-        });
-        t.start();
-
         nSwitch = (Switch) rootView.findViewById(R.id.notification);
         vSwitch = (Switch) rootView.findViewById(R.id.volume);
 
@@ -115,17 +100,5 @@ public class settings_Fragment extends Fragment implements AdapterView.OnItemSel
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
-    }
-
-    public void postData() {
-        String fullUrl = "https://docs.google.com/forms/d/17-5nt3oKS4ZOc1ERlBnOs8UbPkupwfUpVLBWvIsqt58/formResponse";
-        HttpRequest mReq = new HttpRequest();
-        String col1 = "Hello";
-        String col2 = "World";
-
-        String data = "entry_1926831283=" + URLEncoder.encode(col1) + "&" +
-                "entry_1699419107=" + URLEncoder.encode(col2);
-        String response = mReq.sendPost(fullUrl, data);
-        Log.i(myTag, response);
     }
 }
