@@ -16,11 +16,11 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginTop="19dp"
         android:gravity="center"
         android:text="@string/defineACM"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_gravity="center_horizontal" />
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 </LinearLayout>

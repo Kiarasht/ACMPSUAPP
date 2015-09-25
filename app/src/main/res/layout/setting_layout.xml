@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -8,34 +8,34 @@
         android:id="@+id/notification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="69dp"
         android:checked="true"
-        android:text="@string/notificationswitch"
-        android:layout_gravity="center_horizontal" />
+        android:text="@string/notificationswitch" />
 
     <Switch
         android:id="@+id/volume"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="122dp"
         android:layout_marginTop="71dp"
-        android:text="@string/soundswitch"
         android:checked="false"
-        android:layout_marginStart="122dp" />
+        android:text="@string/soundswitch" />
 
     <Spinner
+        android:id="@+id/spinner"
         android:layout_width="117dp"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="66dp"
-        android:spinnerMode="dialog"
-        android:layout_gravity="center_horizontal" />
+        android:spinnerMode="dialog" />
 
     <TextView
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_gravity="center_horizontal"
         android:text="@string/disclaimer"
-        android:id="@+id/textView4"
-        android:layout_gravity="center_horizontal" />
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
 </LinearLayout>
