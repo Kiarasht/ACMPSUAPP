@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,9 +38,9 @@ public class feedback_Fragment extends Fragment {
     public static final String FEEDBACK_MESSAGE = "entry_1912449623";
 
     private Context context;
-    private EditText subjectEditText;
-    private EditText emailEditText;
-    private EditText messageEditText;
+    private EditText First_last;
+    private EditText Email_address;
+    private EditText Feedback_message;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -47,30 +48,30 @@ public class feedback_Fragment extends Fragment {
         context = getContext();
 
         Button sendButton = (Button) rootView.findViewById(R.id.pushfields);
-        subjectEditText = (EditText) rootView.findViewById(R.id.namefield);
-        emailEditText = (EditText) rootView.findViewById(R.id.emailfield);
-        messageEditText = (EditText) rootView.findViewById(R.id.feedbackfield);
+        First_last = (EditText) rootView.findViewById(R.id.namefield);
+        Email_address = (EditText) rootView.findViewById(R.id.emailfield);
+        Feedback_message = (EditText) rootView.findViewById(R.id.feedbackfield);
 
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if (TextUtils.isEmpty(emailEditText.getText().toString()) ||
-                        TextUtils.isEmpty(subjectEditText.getText().toString()) ||
-                        TextUtils.isEmpty(messageEditText.getText().toString())) {
+                if (TextUtils.isEmpty(Email_address.getText().toString()) ||
+                        TextUtils.isEmpty(First_last.getText().toString()) ||
+                        TextUtils.isEmpty(Feedback_message.getText().toString())) {
                     Toast.makeText(context, "All fields are mandatory.", Toast.LENGTH_LONG).show();
                     return;
                 }
-                if (!android.util.Patterns.EMAIL_ADDRESS.matcher(emailEditText.getText().toString()).matches()) {
+                if (!Patterns.EMAIL_ADDRESS.matcher(Email_address.getText().toString()).matches()) {
                     Toast.makeText(context, "Please enter a valid email.", Toast.LENGTH_LONG).show();
                     return;
                 }
 
                 PostDataTask postDataTask = new PostDataTask();
 
-                postDataTask.execute(URL, emailEditText.getText().toString(),
-                        subjectEditText.getText().toString(),
-                        messageEditText.getText().toString());
+                postDataTask.execute(URL, Email_address.getText().toString(),
+                        Feedback_message.getText().toString(),
+                        First_last.getText().toString());
             }
         });
         return rootView;
