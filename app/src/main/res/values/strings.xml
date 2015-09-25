@@ -3,7 +3,7 @@
     in the action bar when the application opens up -->
     <string name="app_name">ACM</string>
 
-    <string name="sign_up_button">    Sign up for our mailing list</string>
+    <string name="sign_up_button"> Sign up for our mailing list</string>
 
     <!-- A string array used to display names in the drawer itself.
     The spaces is an easy way to align and to place more empty spaces.
@@ -65,7 +65,7 @@
     <string name="volumedata">volumedata</string>
 
     <!-- Strings used for the feedback page including button -->
-    <string name="feedbackbutton">Send</string>
+    <string name="feedbackbutton">Send        </string>
     <string name="feedbacknamehint">First and last name</string>
     <string name="feedbackemailhint">Email</string>
     <string name="feedbackfeedbackhint">Message of feedback.</string>
