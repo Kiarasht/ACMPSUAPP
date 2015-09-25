@@ -66,7 +66,7 @@
 
     <!-- Strings used for the feedback page including button -->
     <string name="feedbackbutton">Send</string>
-    <string name="feedbacknamehint">First and last name.</string>
+    <string name="feedbacknamehint">First and last name</string>
     <string name="feedbackemailhint">Email</string>
     <string name="feedbackfeedbackhint">Message of feedback.</string>
     <string name="feedbackbuttonhint">Button to push all the data entered.</string>

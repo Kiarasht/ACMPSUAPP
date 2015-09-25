@@ -5,30 +5,66 @@
     android:orientation="vertical"
     android:weightSum="1">
 
-    <EditText
-        android:id="@+id/namefield"
+    <Space
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_weight="0.07" />
+
+    <EditText
+        android:id="@+id/namefield"
+        android:maxLength="30"
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="start"
         android:ems="10"
+        android:gravity="center_horizontal"
         android:hint="@string/feedbacknamehint"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:drawableLeft="@drawable/ic_action_account_circle" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.07" />
 
     <EditText
         android:id="@+id/emailfield"
+        android:maxLength="30"
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="start"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="@string/feedbackemailhint"
+        android:inputType="textEmailAddress"
+        android:drawableLeft="@drawable/ic_action_email_24" />
+
+    <Space
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:ems="10"
-        android:hint="@string/feedbackemailhint"
-        android:inputType="textEmailAddress" />
+        android:layout_weight="0.07" />
 
     <EditText
         android:id="@+id/feedbackfield"
+        android:maxLength="140"
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="start"
+        android:gravity="center_horizontal"
+        android:hint="@string/feedbackfeedbackhint"
+        android:drawableLeft="@drawable/ic_action_chat" />
+
+    <Space
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:hint="@string/feedbackfeedbackhint" />
+        android:layout_weight="0.75" />
 
     <Button
         android:id="@+id/pushfields"
@@ -36,5 +72,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:hint="@string/feedbackbuttonhint"
-        android:text="@string/feedbackbutton" />
+        android:text="@string/feedbackbutton"
+        android:drawableLeft="@drawable/ic_action_email" />
 </LinearLayout>

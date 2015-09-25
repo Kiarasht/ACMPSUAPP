@@ -17,7 +17,6 @@ import com.squareup.okhttp.MediaType;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.RequestBody;
-import com.squareup.okhttp.Response;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -25,8 +24,8 @@ import java.net.URLEncoder;
 
 /**
  * feedback_Fragment is a class that allows users to input questions or comments to the ACM.
- * It uses a webView tool to load and represent an already created Google sheet. It uses a
- * nested class of MyBrowser so the app does not exit but rather load inside the app itself.
+ * It uses a bunch of text boxes to hold data and then send them to a google sheet when the
+ * button is pressed. The text boxes are varified to see if valid data have been entered.
  */
 public class feedback_Fragment extends Fragment {
 
@@ -84,14 +83,14 @@ public class feedback_Fragment extends Fragment {
             Boolean result = true;
             String url = contactData[0];
             String email = contactData[1];
-            String subject = contactData[2];
-            String message = contactData[3];
+            String feedback = contactData[2];
+            String name = contactData[3];
             String postBody = "";
 
             try {
                 postBody = EMAIL_KEY + "=" + URLEncoder.encode(email, "UTF-8") +
-                        "&" + FEEDBACK_MESSAGE + "=" + URLEncoder.encode(subject, "UTF-8") +
-                        "&" + FIRST_LAST + "=" + URLEncoder.encode(message, "UTF-8");
+                        "&" + FEEDBACK_MESSAGE + "=" + URLEncoder.encode(feedback, "UTF-8") +
+                        "&" + FIRST_LAST + "=" + URLEncoder.encode(name, "UTF-8");
             } catch (UnsupportedEncodingException ex) {
                 result = false;
             }
@@ -103,7 +102,7 @@ public class feedback_Fragment extends Fragment {
                         .url(url)
                         .post(body)
                         .build();
-                Response response = client.newCall(request).execute();
+                client.newCall(request).execute();
             } catch (IOException exception) {
                 result = false;
             }
