@@ -29,6 +29,11 @@ import java.net.URLEncoder;
  */
 public class feedback_Fragment extends Fragment {
 
+    /**
+     * These values were taken from the google sheet. The Url represents where the form is being
+     * held while the entry represents each text box on that form. So in this case our form has
+     * total of 3 text boxes.
+     */
     public static final MediaType FORM_DATA_TYPE
             = MediaType.parse("application/x-www-form-urlencoded; charset=utf-8");
     public static final String URL = "https://docs.google.com/forms/d/15yNjmU-NgUbmqEm--ccEerCG4p-ndsDwBYPnCXh49L4/formResponse";
@@ -36,21 +41,41 @@ public class feedback_Fragment extends Fragment {
     public static final String EMAIL_KEY = "entry_1992702626";
     public static final String FEEDBACK_MESSAGE = "entry_1912449623";
 
+    /**
+     * Getting a variable from our fragment's context and one for each textbox on
+     * the it.
+     */
     private Context context;
     private EditText First_last;
     private EditText Email_address;
     private EditText Feedback_message;
 
+    /**
+     * Our onCreatView on feedback includes textbox fields to have the user enter their name,
+     * email, and feedback. The textboxes are then varified to not be empty while also using
+     * a java parsing tool to check the validity of the email.
+     *
+     * @param inflater           Required since we are extending a Fragment rather than Activity
+     * @param container          Required since we are extending a Fragment rather than Activity
+     * @param savedInstanceState A default parameter even when extending Activity
+     * @return Returns the view of the fragment
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.feedback_layout, container, false);
         context = getContext();
 
+        /**
+         * Set up a variable for each of the elements on the view.
+         */
         Button sendButton = (Button) rootView.findViewById(R.id.pushfields);
         First_last = (EditText) rootView.findViewById(R.id.namefield);
         Email_address = (EditText) rootView.findViewById(R.id.emailfield);
         Feedback_message = (EditText) rootView.findViewById(R.id.feedbackfield);
 
+        /**
+         * This function is only called when the sendButton is clicked.
+         */
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,8 +101,20 @@ public class feedback_Fragment extends Fragment {
         return rootView;
     }
 
+    /**
+     * Class responsible of sending the data in the background. In only contains two functions.
+     * One doing most of the work while other doing the checking. This class could have been
+     * moved into a file of its own but since its only used by settings it has been moved
+     * in this file instead.
+     */
     private class PostDataTask extends AsyncTask<String, Void, Boolean> {
 
+        /**
+         * Our post function that takes the url, name, email, feedback and gets ready to post them
+         *
+         * @param contactData A list of strings where in this case we should only have 4
+         * @return Returns a boolean to see if the data was posted successfully or not
+         */
         @Override
         protected Boolean doInBackground(String... contactData) {
             Boolean result = true;
@@ -87,6 +124,11 @@ public class feedback_Fragment extends Fragment {
             String name = contactData[3];
             String postBody = "";
 
+            /**
+             * First we try to encode the entire strings combined. This is to get rid of
+             * any illegal characters or returning if something goes really wrong in the
+             * process of parsing.
+             */
             try {
                 postBody = EMAIL_KEY + "=" + URLEncoder.encode(email, "UTF-8") +
                         "&" + FEEDBACK_MESSAGE + "=" + URLEncoder.encode(feedback, "UTF-8") +
@@ -95,6 +137,10 @@ public class feedback_Fragment extends Fragment {
                 result = false;
             }
 
+            /**
+             * After the entire strings were validated we start to use OkHttp, an open source
+             * library to send these data to google sheet.
+             */
             try {
                 OkHttpClient client = new OkHttpClient();
                 RequestBody body = RequestBody.create(FORM_DATA_TYPE, postBody);
@@ -109,9 +155,19 @@ public class feedback_Fragment extends Fragment {
             return result;
         }
 
+        /**
+         * An end function that gets called to display a toast message depending on how the
+         * post request to the google sheet went.
+         *
+         * @param result A boolean result that determines that result
+         */
         @Override
         protected void onPostExecute(Boolean result) {
-            Toast.makeText(context, result ? "Message successfully sent!" : "There was some error in sending message. Please try again after some time.", Toast.LENGTH_LONG).show();
+            if (result) {
+                Toast.makeText(context, "Message successfully sent!", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(context, "There was some error in sending the request. Please try again after some time.", Toast.LENGTH_LONG).show();
+            }
         }
 
     }
