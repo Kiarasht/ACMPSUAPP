@@ -26,19 +26,11 @@ public class settings_Fragment extends Fragment implements AdapterView.OnItemSel
     Switch nSwitch;
     Switch vSwitch;
 
-    String[] strings = {"CoderzHeaven","Google",
-            "Microsoft", "Apple", "Yahoo","Samsung", "Samsung","Samsung","Samsung","Samsung","Samsung"};
-
-    String[] subs = {"Heaven of all working codes ","Google sub",
-            "Microsoft sub", "Apple sub", "Yahoo sub","Samsung sub", "Samsung sub", "Samsung sub",
-            "Samsung sub", "Samsung sub", "Samsung sub",};
-
-
     int arr_images[] = { R.drawable.ic_action_account_circle,
             R.drawable.ic_action_account_circle, R.drawable.ic_action_account_circle,
             R.drawable.ic_action_account_circle, R.drawable.ic_action_account_circle, R.drawable.ic_action_account_circle,
             R.drawable.ic_action_account_circle, R.drawable.ic_action_account_circle, R.drawable.ic_action_account_circle,
-            R.drawable.ic_action_account_circle, R.drawable.ic_action_account_circle};
+            R.drawable.ic_action_email};
 
     @Nullable
     @Override
@@ -48,7 +40,7 @@ public class settings_Fragment extends Fragment implements AdapterView.OnItemSel
         vSwitch = (Switch) rootView.findViewById(R.id.volume);
 
         Spinner spinner = (Spinner) rootView.findViewById(R.id.spinner);
-        spinner.setAdapter(new MyAdapter(getContext(), R.layout.row, strings));
+        spinner.setAdapter(new MyAdapter(getContext(), R.layout.row, getResources().getStringArray(R.array.array_theme)));
         spinner.setOnItemSelectedListener(this);
 
         SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
@@ -136,10 +128,10 @@ public class settings_Fragment extends Fragment implements AdapterView.OnItemSel
             LayoutInflater inflater=getActivity().getLayoutInflater();
             View row=inflater.inflate(R.layout.row, parent, false);
             TextView label=(TextView)row.findViewById(R.id.company);
-            label.setText(strings[position]);
+            label.setText(getResources().getStringArray(R.array.array_theme)[position]);
 
             TextView sub=(TextView)row.findViewById(R.id.sub);
-            sub.setText(subs[position]);
+            sub.setText(getResources().getStringArray(R.array.array_theme_describe)[position]);
 
             ImageView icon=(ImageView)row.findViewById(R.id.image);
             icon.setImageResource(arr_images[position]);

@@ -85,4 +85,32 @@
         <item>Brown</item>
         <item>Grey</item>
     </string-array>
+
+    <!-- An array list that mildly describes each of the themes. -->
+    <string-array name="array_theme_describe">
+        <item>The official theme of ACM, a green look.</item>
+        <item>Red theme, similar of to Gmail.</item>
+        <item>A standard blue look.</item>
+        <item>Purple for when just why not?</item>
+        <item>Indigo theme, being much a like purple.</item>
+        <item>Cyan theme for having a blueish look.</item>
+        <item>Yellow for a much bright look.</item>
+        <item>Orange theme, very alike to yellow.</item>
+        <item>Brown theme for a dark look theme.</item>
+        <item>Grey theme, for a standard dark look.</item>
+    </string-array>
+
+    <!-- An array list of icons that represents each row. -->
+    <string-array name="array_theme_icon">
+        <item>@drawable/ic_action_email</item>
+        <item>@drawable/ic_action_event</item>
+        <item>@drawable/ic_action_feedback</item>
+        <item>@drawable/ic_action_settings</item>
+        <item>@drawable/ic_action_help</item>
+        <item>@drawable/ic_action_home</item>
+        <item>@drawable/ic_action_event</item>
+        <item>@drawable/ic_action_feedback</item>
+        <item>@drawable/ic_action_settings</item>
+        <item>@drawable/ic_action_help</item>
+    </string-array>
 </resources>
