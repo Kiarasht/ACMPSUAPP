@@ -43,7 +43,7 @@
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="144dp"
+        android:layout_width="279dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:spinnerMode="dialog" />

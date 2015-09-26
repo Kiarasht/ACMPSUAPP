@@ -3,6 +3,7 @@ package com.pdx.acm.acmpsuapp;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.res.TypedArray;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -26,12 +27,6 @@ public class settings_Fragment extends Fragment implements AdapterView.OnItemSel
     Switch nSwitch;
     Switch vSwitch;
 
-    int arr_images[] = { R.drawable.ic_action_account_circle,
-            R.drawable.ic_action_account_circle, R.drawable.ic_action_account_circle,
-            R.drawable.ic_action_account_circle, R.drawable.ic_action_account_circle, R.drawable.ic_action_account_circle,
-            R.drawable.ic_action_account_circle, R.drawable.ic_action_account_circle, R.drawable.ic_action_account_circle,
-            R.drawable.ic_action_email};
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -53,7 +48,8 @@ public class settings_Fragment extends Fragment implements AdapterView.OnItemSel
             nSwitch.setChecked(true);
         } else if (savednotification == 0) {
             nSwitch.setChecked(false);
-        } if (savedvolume == 1) {
+        }
+        if (savedvolume == 1) {
             vSwitch.setChecked(true);
         } else if (savedvolume == 0) {
             vSwitch.setChecked(false);
@@ -107,14 +103,14 @@ public class settings_Fragment extends Fragment implements AdapterView.OnItemSel
 
     }
 
-    public class MyAdapter extends ArrayAdapter<String>{
+    public class MyAdapter extends ArrayAdapter<String> {
 
-        public MyAdapter(Context context, int textViewResourceId,   String[] objects) {
+        public MyAdapter(Context context, int textViewResourceId, String[] objects) {
             super(context, textViewResourceId, objects);
         }
 
         @Override
-        public View getDropDownView(int position, View convertView,ViewGroup parent) {
+        public View getDropDownView(int position, View convertView, ViewGroup parent) {
             return getCustomView(position, convertView, parent);
         }
 
@@ -125,16 +121,17 @@ public class settings_Fragment extends Fragment implements AdapterView.OnItemSel
 
         public View getCustomView(int position, View convertView, ViewGroup parent) {
 
-            LayoutInflater inflater=getActivity().getLayoutInflater();
-            View row=inflater.inflate(R.layout.row, parent, false);
-            TextView label=(TextView)row.findViewById(R.id.company);
+            LayoutInflater inflater = getActivity().getLayoutInflater();
+            View row = inflater.inflate(R.layout.row, parent, false);
+            TextView label = (TextView) row.findViewById(R.id.company);
             label.setText(getResources().getStringArray(R.array.array_theme)[position]);
 
-            TextView sub=(TextView)row.findViewById(R.id.sub);
+            TextView sub = (TextView) row.findViewById(R.id.sub);
             sub.setText(getResources().getStringArray(R.array.array_theme_describe)[position]);
 
-            ImageView icon=(ImageView)row.findViewById(R.id.image);
-            icon.setImageResource(arr_images[position]);
+            TypedArray imgs = getResources().obtainTypedArray(R.array.array_theme_icon);
+            ImageView icon = (ImageView) row.findViewById(R.id.image);
+            icon.setImageResource(imgs.getResourceId(position, 0));
 
             return row;
         }
