@@ -27,15 +27,18 @@ public class settings_Fragment extends Fragment implements AdapterView.OnItemSel
     Switch vSwitch;
 
     String[] strings = {"CoderzHeaven","Google",
-            "Microsoft", "Apple", "Yahoo","Samsung"};
+            "Microsoft", "Apple", "Yahoo","Samsung", "Samsung","Samsung","Samsung","Samsung","Samsung"};
 
     String[] subs = {"Heaven of all working codes ","Google sub",
-            "Microsoft sub", "Apple sub", "Yahoo sub","Samsung sub"};
+            "Microsoft sub", "Apple sub", "Yahoo sub","Samsung sub", "Samsung sub", "Samsung sub",
+            "Samsung sub", "Samsung sub", "Samsung sub",};
 
 
     int arr_images[] = { R.drawable.ic_action_account_circle,
             R.drawable.ic_action_account_circle, R.drawable.ic_action_account_circle,
-            R.drawable.ic_action_account_circle, R.drawable.ic_action_account_circle, R.drawable.ic_action_account_circle};
+            R.drawable.ic_action_account_circle, R.drawable.ic_action_account_circle, R.drawable.ic_action_account_circle,
+            R.drawable.ic_action_account_circle, R.drawable.ic_action_account_circle, R.drawable.ic_action_account_circle,
+            R.drawable.ic_action_account_circle, R.drawable.ic_action_account_circle};
 
     @Nullable
     @Override

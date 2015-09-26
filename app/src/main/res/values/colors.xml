@@ -64,4 +64,7 @@
     <color name="button_fill_1">#AED581</color>
     <color name="button_fill_2">#33691E</color>
     <color name="button_border">#1B5E20</color>
+
+    <color name="global_black">#000000</color>
+    <color name="global_white">#FFFFFF</color>
 </resources>

@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:checked="true"
-        android:drawableLeft="@drawable/ic_action_account_circle"
+        android:drawableLeft="@drawable/ic_action_notifications_active"
         android:text="@string/notificationswitch" />
 
     <Space
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:checked="false"
-        android:drawableLeft="@drawable/ic_action_account_circle"
+        android:drawableLeft="@drawable/ic_action_volume_off"
         android:text="@string/soundswitch" />
 
     <Space
@@ -59,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:drawableLeft="@drawable/ic_action_account_circle"
+        android:drawableLeft="@drawable/ic_action_report"
         android:text="@string/disclaimer"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
