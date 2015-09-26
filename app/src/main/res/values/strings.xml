@@ -57,7 +57,7 @@
     <string name="notificationswitch">Notification</string>
     <string name="themeswitch">Theme</string>
     <string name="soundswitch">Volume       </string>
-    <string name="disclaimer">App may need to restart for theme to take effect.</string>
+    <string name="disclaimer">App may need to restart for themes to take effect.</string>
 
     <!-- Strings used for sharing data using the SharedPreferences -->
     <string name="notificationdata">notificationdata</string>
@@ -70,6 +70,7 @@
     <string name="feedbackemailhint">Email</string>
     <string name="feedbackfeedbackhint">Message of feedback.</string>
     <string name="feedbackbuttonhint">Button to push all the data entered.</string>
+    <string name="rowspinnerhelp">An image to be used in spinner</string>
 
     <!-- An array list that holds the text related to spinner in settings -->
     <string-array name="array_theme">
@@ -84,4 +85,19 @@
         <item>Brown</item>
         <item>Grey</item>
     </string-array>
+
+    <string name="prompt">  Select your Favourite  </string>
+    <drawable name="white">#ffffff</drawable>
+    <drawable name="black">#000000</drawable>
+    <drawable name="green">#347C2C</drawable>
+    <drawable name="pink">#FF00FF</drawable>
+    <drawable name="violet">#a020f0</drawable>
+    <drawable name="grey">#778899</drawable>
+    <drawable name="red">#C11B17</drawable>
+    <drawable name="yellow">#FFFF8C</drawable>
+    <drawable name="PowderBlue">#b0e0e6</drawable>
+    <drawable name="brown">#2F1700</drawable>
+    <drawable name="Hotpink">#7D2252</drawable>
+    <string name="select_Category">Select Category</string>
+    <drawable name="darkgrey">#606060</drawable>
 </resources>

@@ -2,39 +2,64 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.20" />
 
     <Switch
         android:id="@+id/notification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="69dp"
         android:checked="true"
+        android:drawableLeft="@drawable/ic_action_account_circle"
         android:text="@string/notificationswitch" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.20" />
 
     <Switch
         android:id="@+id/volume"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="122dp"
-        android:layout_marginTop="71dp"
+        android:layout_gravity="center_horizontal"
         android:checked="false"
+        android:drawableLeft="@drawable/ic_action_account_circle"
         android:text="@string/soundswitch" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.20" />
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="117dp"
+        android:layout_width="144dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="66dp"
         android:spinnerMode="dialog" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.36" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:drawableLeft="@drawable/ic_action_account_circle"
         android:text="@string/disclaimer"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 

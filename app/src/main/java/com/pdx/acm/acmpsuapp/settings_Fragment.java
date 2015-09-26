@@ -12,8 +12,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Switch;
+import android.widget.TextView;
 
 /**
  * settings_Fragment contains various options where a user can mange the app such as their
@@ -24,6 +26,17 @@ public class settings_Fragment extends Fragment implements AdapterView.OnItemSel
     Switch nSwitch;
     Switch vSwitch;
 
+    String[] strings = {"CoderzHeaven","Google",
+            "Microsoft", "Apple", "Yahoo","Samsung"};
+
+    String[] subs = {"Heaven of all working codes ","Google sub",
+            "Microsoft sub", "Apple sub", "Yahoo sub","Samsung sub"};
+
+
+    int arr_images[] = { R.drawable.ic_action_account_circle,
+            R.drawable.ic_action_account_circle, R.drawable.ic_action_account_circle,
+            R.drawable.ic_action_account_circle, R.drawable.ic_action_account_circle, R.drawable.ic_action_account_circle};
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -32,10 +45,7 @@ public class settings_Fragment extends Fragment implements AdapterView.OnItemSel
         vSwitch = (Switch) rootView.findViewById(R.id.volume);
 
         Spinner spinner = (Spinner) rootView.findViewById(R.id.spinner);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),
-                R.array.array_theme, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
-        spinner.setAdapter(adapter);
+        spinner.setAdapter(new MyAdapter(getContext(), R.layout.row, strings));
         spinner.setOnItemSelectedListener(this);
 
         SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
@@ -100,5 +110,38 @@ public class settings_Fragment extends Fragment implements AdapterView.OnItemSel
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    public class MyAdapter extends ArrayAdapter<String>{
+
+        public MyAdapter(Context context, int textViewResourceId,   String[] objects) {
+            super(context, textViewResourceId, objects);
+        }
+
+        @Override
+        public View getDropDownView(int position, View convertView,ViewGroup parent) {
+            return getCustomView(position, convertView, parent);
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            return getCustomView(position, convertView, parent);
+        }
+
+        public View getCustomView(int position, View convertView, ViewGroup parent) {
+
+            LayoutInflater inflater=getActivity().getLayoutInflater();
+            View row=inflater.inflate(R.layout.row, parent, false);
+            TextView label=(TextView)row.findViewById(R.id.company);
+            label.setText(strings[position]);
+
+            TextView sub=(TextView)row.findViewById(R.id.sub);
+            sub.setText(subs[position]);
+
+            ImageView icon=(ImageView)row.findViewById(R.id.image);
+            icon.setImageResource(arr_images[position]);
+
+            return row;
+        }
     }
 }
