@@ -140,16 +140,19 @@ public class MainActivity extends AppCompatActivity
                 onSectionAttached(1);
                 break;
             case 2:
-                objFragment = new feedback_Fragment();
+                objFragment = new signup_Fragment();
                 onSectionAttached(2);
-                break;
             case 3:
-                objFragment = new settings_Fragment();
+                objFragment = new feedback_Fragment();
                 onSectionAttached(3);
                 break;
             case 4:
-                objFragment = new about_Fragment();
+                objFragment = new settings_Fragment();
                 onSectionAttached(4);
+                break;
+            case 5:
+                objFragment = new about_Fragment();
+                onSectionAttached(5);
                 break;
         }
 

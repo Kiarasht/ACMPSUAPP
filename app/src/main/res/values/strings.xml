@@ -14,6 +14,7 @@
     <string-array name="sections">
         <item>    Home</item>
         <item>    Calender</item>
+        <item>    Sign up</item>
         <item>    Feedback</item>
         <item>    Settings</item>
         <item>    About</item>
@@ -33,6 +34,7 @@
     These icons will be placed before their respective descriptions -->
     <string-array name="sections_icons">
         <item>@drawable/ic_action_home</item>
+        <item>@drawable/ic_action_event</item>
         <item>@drawable/ic_action_event</item>
         <item>@drawable/ic_action_feedback</item>
         <item>@drawable/ic_action_settings</item>
