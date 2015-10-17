@@ -23,7 +23,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
 /**
- * feedback_Fragment is a class that allows users to input questions or comments to the ACM.
+ * signup_Fragment is a class that allows users to input questions or comments to the ACM.
  * It uses a bunch of text boxes to hold data and then send them to a google sheet when the
  * button is pressed. The text boxes are varified to see if valid data have been entered.
  */
@@ -36,9 +36,9 @@ public class signup_Fragment extends Fragment {
      */
     public static final MediaType FORM_DATA_TYPE
             = MediaType.parse("application/x-www-form-urlencoded; charset=utf-8");
-    public static final String URL = "https://docs.google.com/forms/d/15yNjmU-NgUbmqEm--ccEerCG4p-ndsDwBYPnCXh49L4/formResponse";
-    public static final String FIRST_LAST = "entry_629565629";
-    public static final String EMAIL_KEY = "entry_1992702626";
+    public static final String URL = "https://docs.google.com/forms/d/17-5nt3oKS4ZOc1ERlBnOs8UbPkupwfUpVLBWvIsqt58/formResponse";
+    public static final String FIRST_LAST = "entry_1926831283";
+    public static final String EMAIL_KEY = "entry_1699419107";
 
     /**
      * Getting a variable from our fragment's context and one for each textbox on
@@ -49,8 +49,8 @@ public class signup_Fragment extends Fragment {
     private EditText Email_address;
 
     /**
-     * Our onCreatView on feedback includes textbox fields to have the user enter their name,
-     * email, and feedback. The textboxes are then varified to not be empty while also using
+     * Our onCreatView on signup includes textbox fields to have the user enter their name,
+     * email. The textboxes are then varified to not be empty while also using
      * a java parsing tool to check the validity of the email.
      *
      * @param inflater           Required since we are extending a Fragment rather than Activity
@@ -60,15 +60,15 @@ public class signup_Fragment extends Fragment {
      */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.signup_layout_layout, container, false);
+        View rootView = inflater.inflate(R.layout.signup_layout, container, false);
         context = getContext();
 
         /**
          * Set up a variable for each of the elements on the view.
          */
-        Button sendButton = (Button) rootView.findViewById(R.id.pushfields);
-        First_last = (EditText) rootView.findViewById(R.id.namefield);
-        Email_address = (EditText) rootView.findViewById(R.id.emailfield);
+        Button sendButton = (Button) rootView.findViewById(R.id.pushfields2);
+        First_last = (EditText) rootView.findViewById(R.id.namefield2);
+        Email_address = (EditText) rootView.findViewById(R.id.emailfield2);
 
         /**
          * This function is only called when the sendButton is clicked.
@@ -105,7 +105,7 @@ public class signup_Fragment extends Fragment {
     private class PostDataTask extends AsyncTask<String, Void, Boolean> {
 
         /**
-         * Our post function that takes the url, name, email, feedback and gets ready to post them
+         * Our post function that takes the url, name, email, gets ready to post them
          *
          * @param contactData A list of strings where in this case we should only have 4
          * @return Returns a boolean to see if the data was posted successfully or not

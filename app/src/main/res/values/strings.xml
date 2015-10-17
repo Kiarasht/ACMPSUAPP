@@ -25,6 +25,7 @@
     <string-array name="section_titles">
         <item>Home</item>
         <item>Calender</item>
+        <item>Sign up</item>
         <item>Feedback</item>
         <item>Settings</item>
         <item>About</item>
@@ -35,7 +36,7 @@
     <string-array name="sections_icons">
         <item>@drawable/ic_action_home</item>
         <item>@drawable/ic_action_event</item>
-        <item>@drawable/ic_action_event</item>
+        <item>@drawable/ic_account_circle</item>
         <item>@drawable/ic_action_feedback</item>
         <item>@drawable/ic_action_settings</item>
         <item>@drawable/ic_action_help</item>
