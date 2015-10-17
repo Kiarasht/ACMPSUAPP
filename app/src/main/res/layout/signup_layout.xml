@@ -12,7 +12,7 @@
         android:layout_weight="0.07" />
 
     <EditText
-        android:id="@+id/namefield"
+        android:id="@+id/namefield2"
         android:layout_width="282dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -31,7 +31,7 @@
         android:layout_weight="0.07" />
 
     <EditText
-        android:id="@+id/emailfield"
+        android:id="@+id/emailfield2"
         android:layout_width="282dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"

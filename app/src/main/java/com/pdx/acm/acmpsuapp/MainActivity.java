@@ -142,6 +142,7 @@ public class MainActivity extends AppCompatActivity
             case 2:
                 objFragment = new signup_Fragment();
                 onSectionAttached(2);
+                break;
             case 3:
                 objFragment = new feedback_Fragment();
                 onSectionAttached(3);
