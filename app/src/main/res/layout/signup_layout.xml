@@ -54,7 +54,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.75" />
+        android:layout_weight="0.35" />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avloadingIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:indicator="BallPulse"
+        app:indicator_color="@color/global_white"
+        android:layout_gravity="center_horizontal" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.35" />
 
     <Button
         android:id="@+id/pushfields2"
@@ -68,12 +83,4 @@
         android:text="@string/feedbackbutton"
         android:textAllCaps="false" />
 
-    <com.wang.avi.AVLoadingIndicatorView
-        android:id="@+id/avloadingIndicatorView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="visible"
-        app:indicator="BallPulse"
-        app:indicator_color="@color/global_white"
-        android:layout_gravity="center_horizontal" />
 </LinearLayout>
