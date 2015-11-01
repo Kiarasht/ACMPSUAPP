@@ -17,6 +17,7 @@ import com.squareup.okhttp.MediaType;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.RequestBody;
+import com.wang.avi.AVLoadingIndicatorView;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -47,6 +48,7 @@ public class signup_Fragment extends Fragment {
     private Context context;
     private EditText First_last;
     private EditText Email_address;
+    private View rootView;
 
     /**
      * Our onCreatView on signup includes textbox fields to have the user enter their name,
@@ -60,7 +62,7 @@ public class signup_Fragment extends Fragment {
      */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.signup_layout, container, false);
+        rootView = inflater.inflate(R.layout.signup_layout, container, false);
         context = getContext();
 
         /**
@@ -69,6 +71,7 @@ public class signup_Fragment extends Fragment {
         Button sendButton = (Button) rootView.findViewById(R.id.pushfields2);
         First_last = (EditText) rootView.findViewById(R.id.namefield2);
         Email_address = (EditText) rootView.findViewById(R.id.emailfield2);
+        stopAnim();
 
         /**
          * This function is only called when the sendButton is clicked.
@@ -76,14 +79,16 @@ public class signup_Fragment extends Fragment {
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startAnim();
                 if (TextUtils.isEmpty(Email_address.getText().toString()) ||
                         TextUtils.isEmpty(First_last.getText().toString())) {
                     Toast.makeText(context, "All fields are mandatory.", Toast.LENGTH_LONG).show();
+                    stopAnim();
                     return;
                 }
                 if (!Patterns.EMAIL_ADDRESS.matcher(Email_address.getText().toString()).matches()) {
                     Toast.makeText(context, "Please enter a valid email.", Toast.LENGTH_LONG).show();
+                    stopAnim();
                     return;
                 }
 
@@ -161,7 +166,16 @@ public class signup_Fragment extends Fragment {
             } else {
                 Toast.makeText(context, "There was some error in sending the request. Please try again after some time.", Toast.LENGTH_LONG).show();
             }
+            stopAnim();
         }
 
+    }
+
+    void startAnim(){
+        rootView.findViewById(R.id.avloadingIndicatorView).setVisibility(View.VISIBLE);
+    }
+
+    void stopAnim(){
+        rootView.findViewById(R.id.avloadingIndicatorView).setVisibility(View.INVISIBLE);
     }
 }
