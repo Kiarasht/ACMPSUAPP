@@ -9,7 +9,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.20" />
+        android:layout_weight="0.05" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="288dp"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dialog"
+        android:layout_gravity="center_horizontal" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.10" />
 
     <Switch
         android:id="@+id/notification"
@@ -24,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.20" />
+        android:layout_weight="0.10" />
 
     <Switch
         android:id="@+id/volume"
@@ -39,20 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.20" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="279dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:spinnerMode="dialog" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="0.36" />
+        android:layout_weight="0.70" />
 
     <TextView
         android:id="@+id/textView4"

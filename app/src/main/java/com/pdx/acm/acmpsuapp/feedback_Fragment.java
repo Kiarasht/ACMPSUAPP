@@ -36,10 +36,10 @@ public class feedback_Fragment extends Fragment {
      */
     public static final MediaType FORM_DATA_TYPE
             = MediaType.parse("application/x-www-form-urlencoded; charset=utf-8");
-    public static final String URL = "https://docs.google.com/forms/d/15yNjmU-NgUbmqEm--ccEerCG4p-ndsDwBYPnCXh49L4/formResponse";
-    public static final String FIRST_LAST = "entry_629565629";
-    public static final String EMAIL_KEY = "entry_1992702626";
-    public static final String FEEDBACK_MESSAGE = "entry_1912449623";
+    public static final String URL = "https://docs.google.com/forms/d/1WKPkScUI8h3pYgp8-PfEXBEi7H-fn_YLZXN_XonKr9E/formResponse";
+    public static final String FIRST_LAST = "entry_1490375917";
+    public static final String EMAIL_KEY = "entry_1006047677";
+    public static final String FEEDBACK_MESSAGE = "entry_1252664884";
 
     /**
      * Getting a variable from our fragment's context and one for each textbox on

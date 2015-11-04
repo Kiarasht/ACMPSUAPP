@@ -91,16 +91,16 @@
 
     <!-- An array list that mildly describes each of the themes. -->
     <string-array name="array_theme_describe">
-        <item>The official theme of ACM.</item>
-        <item>Red theme, similar to Gmail.</item>
-        <item>A standard blue look.</item>
-        <item>Purple for when why not?</item>
-        <item>Indigo, much like purple.</item>
-        <item>Cyan theme for a blueish look.</item>
-        <item>Yellow for a bright look.</item>
-        <item>Orange, much like yellow.</item>
-        <item>Brown, for a dark look.</item>
-        <item>Grey, a standard dark look.</item>
+        <item>The official theme of ACM</item>
+        <item>Red theme, similar to Gmail</item>
+        <item>A standard blue look</item>
+        <item>Purple for when why not</item>
+        <item>Indigo, much like purple</item>
+        <item>Cyan theme for a blueish look</item>
+        <item>Yellow for a bright look</item>
+        <item>Orange, much like yellow</item>
+        <item>Brown, for a dark look</item>
+        <item>Grey, a standard dark look</item>
     </string-array>
 
     <!-- An array list of icons that represents each row. -->

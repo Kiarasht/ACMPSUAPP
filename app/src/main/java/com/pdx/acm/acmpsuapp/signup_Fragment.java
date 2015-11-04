@@ -37,9 +37,9 @@ public class signup_Fragment extends Fragment {
      */
     public static final MediaType FORM_DATA_TYPE
             = MediaType.parse("application/x-www-form-urlencoded; charset=utf-8");
-    public static final String URL = "https://docs.google.com/forms/d/17-5nt3oKS4ZOc1ERlBnOs8UbPkupwfUpVLBWvIsqt58/formResponse";
-    public static final String FIRST_LAST = "entry_1926831283";
-    public static final String EMAIL_KEY = "entry_1699419107";
+    public static final String URL = "https://docs.google.com/forms/d/1sJ0t8BXsAE2TmunROCDNJa50pHip4ZfgQ53a3x6yWK0/formResponse";
+    public static final String FIRST_LAST = "entry_18464116";
+    public static final String EMAIL_KEY = "entry_861593219";
 
     /**
      * Getting a variable from our fragment's context and one for each textbox on
