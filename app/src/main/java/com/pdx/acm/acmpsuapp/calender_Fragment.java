@@ -1,12 +1,13 @@
 package com.pdx.acm.acmpsuapp;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -64,7 +65,13 @@ public class calender_Fragment extends Fragment implements CalendarPickerControl
 
     @Override
     public void onEventSelected(CalendarEvent event) {
-        Log.d(TAG, "Selected event: " + event);
+        Calendar startTime = event.getStartTime();
+        Calendar endTime = event.getEndTime();
+        int starthr = startTime.get(Calendar.HOUR_OF_DAY);
+        int startmi = startTime.get(Calendar.MINUTE);
+        int endhr = endTime.get(Calendar.HOUR_OF_DAY);
+        int endmi = endTime.get(Calendar.MINUTE);
+        Log.d(TAG, "Selected event: " + starthr + ":" + startmi + " " + endhr + ":" + endmi + ".");
     }
 
     private void mockList(List<CalendarEvent> eventList) {
