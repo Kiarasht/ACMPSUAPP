@@ -4,6 +4,7 @@ package com.pdx.acm.acmpsuapp;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -197,9 +198,50 @@ public class settings_Fragment extends Fragment implements AdapterView.OnItemSel
 
             TypedArray imgs = getResources().obtainTypedArray(R.array.array_theme_icon);
             ImageView icon = (ImageView) row.findViewById(R.id.image);
+            icon.setColorFilter(getcolor(position));
             icon.setImageResource(imgs.getResourceId(position, 0));
 
             return row;
         }
+    }
+
+    private int getcolor(int position) {
+        int color;
+
+        switch (position) {
+            case 0:
+                color = Color.parseColor("#4CAF50");
+                break;
+            case 1:
+                color = Color.parseColor("#F44336");
+                break;
+            case 2:
+                color = Color.parseColor("#2196F3");
+                break;
+            case 3:
+                color = Color.parseColor("#9C27B0");
+                break;
+            case 4:
+                color = Color.parseColor("#3F51B5");
+                break;
+            case 5:
+                color = Color.parseColor("#00BCD4");
+                break;
+            case 6:
+                color = Color.parseColor("#FFC107");
+                break;
+            case 7:
+                color = Color.parseColor("#FF9800");
+                break;
+            case 8:
+                color = Color.parseColor("#795548");
+                break;
+            case 9:
+                color = Color.parseColor("#9E9E9E");
+                break;
+            default:
+                color = Color.parseColor("#FFFFFF");
+        }
+        return color;
     }
 }

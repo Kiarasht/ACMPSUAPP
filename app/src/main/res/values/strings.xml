@@ -105,15 +105,15 @@
 
     <!-- An array list of icons that represents each row. -->
     <string-array name="array_theme_icon">
-        <item>@drawable/ic_image_photo_green</item>
-        <item>@drawable/ic_image_photo_red</item>
-        <item>@drawable/ic_image_photo_blue</item>
-        <item>@drawable/ic_image_photo_purple</item>
-        <item>@drawable/ic_image_photo_indigo</item>
-        <item>@drawable/ic_image_photo_cyan</item>
-        <item>@drawable/ic_image_photo_yellow</item>
-        <item>@drawable/ic_image_photo_orange</item>
-        <item>@drawable/ic_image_photo_brown</item>
-        <item>@drawable/ic_image_photo_grey</item>
+        <item>@drawable/ic_insert_photo</item>
+        <item>@drawable/ic_insert_photo</item>
+        <item>@drawable/ic_insert_photo</item>
+        <item>@drawable/ic_insert_photo</item>
+        <item>@drawable/ic_insert_photo</item>
+        <item>@drawable/ic_insert_photo</item>
+        <item>@drawable/ic_insert_photo</item>
+        <item>@drawable/ic_insert_photo</item>
+        <item>@drawable/ic_insert_photo</item>
+        <item>@drawable/ic_insert_photo</item>
     </string-array>
 </resources>
