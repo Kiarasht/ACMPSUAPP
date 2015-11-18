@@ -27,5 +27,6 @@ dependencies {
     compile 'com.wang.avi:library:1.0.0'
     compile 'com.nineoldandroids:library:2.4.0'
     compile 'com.github.tibolte:agendacalendarview:1.0.1'
+    compile 'com.jakewharton:butterknife:7.0.1'
     }
 

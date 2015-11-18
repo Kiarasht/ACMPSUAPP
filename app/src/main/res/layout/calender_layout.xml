@@ -1,11 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:agendaCalendar="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-    <WebView
-        android:id="@+id/webView2"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/activity_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:background="@color/theme_primary_dark" />
+
+    <com.github.tibolte.agendacalendarview.AgendaCalendarView
+        android:id="@+id/agenda_calendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        agendaCalendar:agendaCurrentDayTextColor="@color/theme_primary"
+        agendaCalendar:calendarColor="@color/theme_primary"
+        agendaCalendar:calendarCurrentDayTextColor="@color/calendar_text_current_day"
+        agendaCalendar:calendarDayTextColor="@color/theme_text_icons"
+        agendaCalendar:calendarHeaderColor="@color/theme_primary_dark"
+        agendaCalendar:calendarPastDayTextColor="@color/theme_light_primary"
+        agendaCalendar:fabColor="@color/theme_accent" />
+
 </LinearLayout>
+
