@@ -116,4 +116,7 @@
         <item>@drawable/ic_insert_photo</item>
         <item>@drawable/ic_insert_photo</item>
     </string-array>
+
+    <!-- Other resources not belonging anywhere else -->
+    <string name="popupbutton">OK!</string>
 </resources>

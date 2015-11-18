@@ -129,4 +129,9 @@
         <item name="android:background">@color/grey_actionbar_color</item>
         <item name="background">@color/grey_actionbar_color</item>
     </style>
+
+    <style name="popout_title" parent="@android:style/Theme.Holo.Dialog">
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
 </resources>
