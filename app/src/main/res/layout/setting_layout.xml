@@ -13,10 +13,10 @@
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="288dp"
+        android:layout_width="174dp"
         android:layout_height="wrap_content"
-        android:spinnerMode="dialog"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:spinnerMode="dialog" />
 
     <Space
         android:layout_width="match_parent"
