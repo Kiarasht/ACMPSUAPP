@@ -42,8 +42,6 @@ public class calender_Fragment extends Fragment implements CalendarPickerControl
         mAgendaCalendarView = (AgendaCalendarView) rootView.findViewById(R.id.agenda_calendar_view);
         mToolbar = (Toolbar) rootView.findViewById(R.id.activity_toolbar);
 
-       //((AppCompatActivity)getActivity()).setSupportActionBar(mToolbar);
-
         Calendar minDate = Calendar.getInstance();
         Calendar maxDate = Calendar.getInstance();
 
@@ -61,39 +59,24 @@ public class calender_Fragment extends Fragment implements CalendarPickerControl
 
     @Override
     public void onDaySelected(DayItem dayItem) {
-        Log.d(TAG, String.format("Selected day: %s", dayItem));
+        Log.d(TAG, "Selected day: " + dayItem);
     }
 
     @Override
     public void onEventSelected(CalendarEvent event) {
-        Log.d(TAG, String.format("Selected event: %s", event));
+        Log.d(TAG, "Selected event: " + event);
     }
 
     private void mockList(List<CalendarEvent> eventList) {
-        Calendar startTime1 = Calendar.getInstance();
-        Calendar endTime1 = Calendar.getInstance();
-        endTime1.add(Calendar.MONTH, 1);
-        CalendarEvent event1 = new CalendarEvent("Thibault travels in Iceland", "A wonderful journey!", "Iceland",
-                ContextCompat.getColor(getContext(), R.color.orange_dark), startTime1, endTime1, true);
-        eventList.add(event1);
-
-        Calendar startTime2 = Calendar.getInstance();
-        startTime2.add(Calendar.DAY_OF_YEAR, 1);
-        Calendar endTime2 = Calendar.getInstance();
-        endTime2.add(Calendar.DAY_OF_YEAR, 3);
-        CalendarEvent event2 = new CalendarEvent("Visit to Dalvík", "A beautiful small town", "Dalvík",
-                ContextCompat.getColor(getContext(), R.color.yellow), startTime2, endTime2, true);
-        eventList.add(event2);
-
-        Calendar startTime3 = Calendar.getInstance();
-        Calendar endTime3 = Calendar.getInstance();
-        startTime3.set(Calendar.HOUR_OF_DAY, 14);
-        startTime3.set(Calendar.MINUTE, 0);
-        endTime3.set(Calendar.HOUR_OF_DAY, 15);
-        endTime3.set(Calendar.MINUTE, 0);
-        CalendarEvent event3 = new CalendarEvent("Visit of Harpa", "", "Dalvík",
-                ContextCompat.getColor(getContext(), R.color.blue_dark), startTime3, endTime3, false);
-        eventList.add(event3);
+        Calendar startTime = Calendar.getInstance();
+        Calendar endTime = Calendar.getInstance();
+        startTime.set(Calendar.HOUR_OF_DAY, 18);
+        startTime.set(Calendar.MINUTE, 30);
+        endTime.set(Calendar.HOUR_OF_DAY, 20);
+        endTime.set(Calendar.MINUTE, 0);
+        CalendarEvent event = new CalendarEvent("ACM workshop by placeholder", "", "FAB-86-01",
+                ContextCompat.getColor(getContext(), R.color.blue_dark), startTime, endTime, false);
+        eventList.add(event);
     }
 }
 
